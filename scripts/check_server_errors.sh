@@ -51,10 +51,10 @@ fi
 
 if grep --quiet --fixed-strings 'Duplicate mod found:' "$SERVERLOG"; then
   dupes=$(grep --fixed-strings 'Duplicate mod found:' "$SERVERLOG" \
-    | while read -r line; do
+    | while read -r line || [ -n "$line" ]; do
         a=$(echo "$line" | grep -oP '(?<=\()[^)]+\.jar(?=\))' | head -1)
         b=$(echo "$line" | grep -oP '(?<=\()[^)]+\.jar(?=\))' | tail -1)
-        [ "$a" != "$b" ] && echo "$line"
+        [ "$a" != "$b" ] && echo "$line" || true
       done)
   if [ -n "$dupes" ]; then
     {
