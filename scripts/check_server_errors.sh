@@ -52,9 +52,9 @@ fi
 if grep --quiet --fixed-strings 'Duplicate mod found:' "$SERVERLOG"; then
   dupes=$(grep --fixed-strings 'Duplicate mod found:' "$SERVERLOG" \
     | while read -r line; do
-        a=$(echo "$line" | grep -oP '(?<=\()[^)]+\.jar(?=\))')
+        a=$(echo "$line" | grep -oP '(?<=\()[^)]+\.jar(?=\))' | head -1)
         b=$(echo "$line" | grep -oP '(?<=\()[^)]+\.jar(?=\))' | tail -1)
-        [ "$(basename "$a")" != "$(basename "$b")" ] && echo "$line"
+        [ "$a" != "$b" ] && echo "$line"
       done)
   if [ -n "$dupes" ]; then
     {
