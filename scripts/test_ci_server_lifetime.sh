@@ -3,7 +3,8 @@ set -euo pipefail
 
 # Taken from https://github.com/MalTeeez/packscripts-auto-builds/blob/gtnh-daily/packaging/scripts/entrypoint.sh
 
-cd "$1"
+WORKDIR=$1
+cd $WORKDIR
 
 echo "Agreeing to eula"
 sed -i "s|eula=false|eula=true|g" eula.txt
@@ -49,8 +50,7 @@ fi
 echo "Stopping server..."
 rcon-cli --host localhost --port 25575 --password whoahaplaintextpassword stop
 
-wait $SERVER_PID
-EXIT_CODE=$?
+wait $SERVER_PID || EXIT_CODE=$?
 kill $TAIL_PID 2>/dev/null || true
 
 if [ $EXIT_CODE -ne 0 ]; then
@@ -65,6 +65,6 @@ if [ $EXIT_CODE -ne 0 ]; then
 fi
 
 echo "Checking for no errors reported during server run"
-bash /tmp/check_server_errors.sh
+bash /tmp/check_server_errors.sh $WORKDIR
 
 exit $EXIT_CODE

@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
 # Taken from https://github.com/MalTeeez/packscripts-auto-builds/blob/gtnh-daily/packaging/scripts/check_server_errors.sh
 
 # bashsupport disable=BP5006 # Global environment variables
+WORKDIR=$1
 CRASH="crash-reports"
 SERVERLOG="server.log"
 
@@ -10,7 +12,7 @@ SERVERLOG="server.log"
 shopt -s nullglob
 
 # store matches in array
-crash_reports=("$RUNDIR/$CRASH/crash"*.txt)
+crash_reports=("$1/$CRASH/crash"*.txt)
 
 # if array not empty there are crash_reports
 if [ "${#crash_reports[@]}" -gt 0 ]; then
