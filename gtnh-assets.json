@@ -16763,7 +16763,7 @@
     },
     {
       "name": "Applied-Energistics-2-Unofficial",
-      "latest_version": "rv3-beta-967-GTNH-pre",
+      "latest_version": "rv3-beta-966-GTNH",
       "private": false,
       "versions": [
         {
@@ -36191,7 +36191,7 @@
     },
     {
       "name": "Botania",
-      "latest_version": "1.13.23-GTNH-pre",
+      "latest_version": "1.13.21-GTNH",
       "private": false,
       "versions": [
         {
@@ -60904,7 +60904,7 @@
     },
     {
       "name": "GT5-Unofficial",
-      "latest_version": "5.09.52.571-pre",
+      "latest_version": "5.09.52.570",
       "private": false,
       "versions": [
         {
@@ -176309,7 +176309,7 @@
     },
     {
       "name": "TinkersConstruct",
-      "latest_version": "1.14.79-GTNH-pre",
+      "latest_version": "1.14.78-GTNH",
       "private": false,
       "versions": [
         {
@@ -187420,6 +187420,6 @@
   ],
   "latest_experimental": 134,
   "latest_successful_experimental": 134,
-  "latest_daily": 546,
-  "latest_successful_daily": 546
+  "latest_daily": 1002,
+  "latest_successful_daily": 1002
 }
