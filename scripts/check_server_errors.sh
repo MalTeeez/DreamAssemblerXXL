@@ -8,11 +8,18 @@ WORKDIR=$1
 CRASH="crash-reports"
 SERVERLOG="server.log"
 
+cd $WORKDIR
+
 # enable nullglob to get 0 results when no match rather than the pattern
 shopt -s nullglob
 
+if [ ! -r "$SERVERLOG" ]; then
+  printf 'check_server_errors: %s missing or unreadable\n' "$SERVERLOG" >&2
+  exit 1
+fi
+
 # store matches in array
-crash_reports=("$1/$CRASH/crash"*.txt)
+crash_reports=("$WORKDIR/$CRASH/crash"*.txt)
 
 # if array not empty there are crash_reports
 if [ "${#crash_reports[@]}" -gt 0 ]; then
@@ -28,7 +35,7 @@ fi
 if grep --quiet --fixed-strings 'Fatal errors were detected' "$SERVERLOG"; then
   {
     printf 'Fatal errors detected:\n'
-    cat $SERVERLOG
+    grep -n --fixed-strings 'Fatal errors were detected' "$SERVERLOG"
   } >&2
   exit 1
 fi
@@ -36,16 +43,16 @@ fi
 if grep --quiet --fixed-strings 'The state engine was in incorrect state ERRORED and forced into state SERVER_STOPPED' \
   "$SERVERLOG"; then
   {
-    printf 'Server force stopped:'
-    cat $SERVERLOG
+    printf 'Server force stopped:\n'
+    grep -n --fixed-strings 'The state engine was in incorrect state ERRORED and forced into state SERVER_STOPPED' "$SERVERLOG"
   } >&2
   exit 1
 fi
 
 if grep --quiet --fixed-strings 'Duplicate mod found:' "$SERVERLOG"; then
   {
-    printf 'Server had duplicate files, environment cant be guaranteed to contain indev version:'
-    cat $SERVERLOG
+    printf 'Server had duplicate files, environment cant be guaranteed to contain indev version:\n'
+    grep -n --fixed-strings 'Duplicate mod found:' "$SERVERLOG"
   } >&2
   exit 1
 fi
@@ -53,10 +60,10 @@ fi
 if grep --quiet --fixed-strings 'Exception stopping the server' "$SERVERLOG"; then
   {
     printf "Server didn't shut down cleanly:\n"
-    cat $SERVERLOG
+    grep -n --fixed-strings 'Exception stopping the server' "$SERVERLOG"
   } >&2
   exit 1
 fi
 
-printf 'No crash reports detected'
+printf 'No crash reports detected\n'
 exit 0
