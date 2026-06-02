@@ -50,7 +50,11 @@ fi
 echo "Stopping server..."
 rcon-cli --host localhost --port 25575 --password whoahaplaintextpassword stop
 
-wait $SERVER_PID || EXIT_CODE=$?
+if wait $SERVER_PID; then
+    EXIT_CODE=0
+else
+    EXIT_CODE=$?
+fi
 kill $TAIL_PID 2>/dev/null || true
 
 if [ $EXIT_CODE -ne 0 ]; then
