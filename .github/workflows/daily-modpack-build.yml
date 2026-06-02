@@ -216,12 +216,12 @@ jobs:
       
       - name: Prepare files for ci run
         run: |
-          sed -i 's|enable-rcon=false|enable-rcon=true\nrcon.password=whoahaplaintextpassword\nrcon.port=25575|' server.properties
+          sed -i 's|enable-rcon=false|enable-rcon=true\nrcon.password=whoahaplaintextpassword\nrcon.port=25575|' /tmp/gtnh-server-unpacked/server.properties
           cp scripts/* /
 
       - name: Run pack test
         timeout-minutes: 30
-        run: bash /test_ci_server_lifetime.sh
+        run: bash /test_ci_server_lifetime.sh /tmp/gtnh-server-unpacked
 
 
   upload:
