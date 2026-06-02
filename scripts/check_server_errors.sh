@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -euo pipefail
+set -exuo pipefail
 
 # Taken from https://github.com/MalTeeez/packscripts-auto-builds/blob/gtnh-daily/packaging/scripts/check_server_errors.sh
 
