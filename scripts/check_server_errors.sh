@@ -50,11 +50,19 @@ if grep --quiet --fixed-strings 'The state engine was in incorrect state ERRORED
 fi
 
 if grep --quiet --fixed-strings 'Duplicate mod found:' "$SERVERLOG"; then
-  {
-    printf 'Server had duplicate files, environment cant be guaranteed to contain indev version:\n'
-    grep -n --fixed-strings 'Duplicate mod found:' "$SERVERLOG"
-  } >&2
-  exit 1
+  dupes=$(grep --fixed-strings 'Duplicate mod found:' "$SERVERLOG" \
+    | while read -r line; do
+        a=$(echo "$line" | grep -oP '(?<=\()[^)]+\.jar(?=\))')
+        b=$(echo "$line" | grep -oP '(?<=\()[^)]+\.jar(?=\))' | tail -1)
+        [ "$(basename "$a")" != "$(basename "$b")" ] && echo "$line"
+      done)
+  if [ -n "$dupes" ]; then
+    {
+      printf 'Server had duplicate files, environment cant be guaranteed to contain indev version:\n'
+      echo "$dupes"
+    } >&2
+    exit 1
+  fi
 fi
 
 if grep --quiet --fixed-strings 'Exception stopping the server' "$SERVERLOG"; then
