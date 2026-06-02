@@ -65,6 +65,6 @@ if [ $EXIT_CODE -ne 0 ]; then
 fi
 
 echo "Checking for no errors reported during server run"
-bash /check_server_errors.sh
+bash /tmp/check_server_errors.sh
 
 exit $EXIT_CODE
