@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -exuo pipefail
+set -euo pipefail
 
 # Taken from https://github.com/MalTeeez/packscripts-auto-builds/blob/gtnh-daily/packaging/scripts/check_server_errors.sh
 
@@ -73,5 +73,5 @@ if grep --quiet --fixed-strings 'Exception stopping the server' "$SERVERLOG"; th
   exit 1
 fi
 
-printf 'No crash reports detected\n'
+printf 'No errors detected with server run\n'
 exit 0
