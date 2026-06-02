@@ -170,6 +170,15 @@ jobs:
     needs: build
     runs-on: ubuntu-24.04
     steps:
+      - name: Check out repository for scripts
+        uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.NIGHTLY_GITHUB_TOKEN }}
+          fetch-depth: 0
+          ref: master
+          sparse-checkout: 
+            scripts/
+
       - name: Download build bundle
         uses: actions/download-artifact@v8
         with:
@@ -187,6 +196,33 @@ jobs:
           test -f "GTNH-daily-${{ needs.build.outputs.today }}-mmcprism-java17-25.zip"
           test -f releases/manifests/daily.json
           test -f gtnh-assets.json
+
+      - name: Unpack server artifact
+        run: |
+          mkdir -p /tmp/gtnh-server-unpacked
+          unzip -o "GTNH-daily-${{ needs.build.outputs.today }}-server-java17-25.zip" -d /tmp/gtnh-server-unpacked/
+          chmod -R u+rX /tmp/gtnh-server-unpacked
+
+      - name: Install Java
+        uses: actions/setup-java@dded0888837ed1f317902acf8a20df0ad188d165
+        with:
+          distribution: temurin
+          java-version: 25
+        
+      - name: Install RCON
+        run: |
+          curl -sSL https://github.com/itzg/rcon-cli/releases/download/1.7.4/rcon-cli_1.7.4_linux_amd64.tar.gz \
+            | tar -xz -C /usr/local/bin rcon-cli
+      
+      - name: Prepare files for ci run
+        run: |
+          sed -i 's|enable-rcon=false|enable-rcon=true\nrcon.password=whoahaplaintextpassword\nrcon.port=25575|' server.properties
+          cp scripts/* /
+
+      - name: Run pack test
+        timeout-minutes: 30
+        run: bash /test_ci_server_lifetime.sh
+
 
   upload:
     needs: [build, test]
