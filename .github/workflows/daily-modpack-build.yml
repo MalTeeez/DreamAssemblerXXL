@@ -230,6 +230,8 @@ jobs:
 
 
   upload:
+    permissions:
+      contents: write # push commit
     needs: [build, test]
     runs-on: ubuntu-24.04
     env:
