@@ -172,9 +172,13 @@ jobs:
           - java-version: 25
             zip-variant: "server-java17-25"
             java-args: "-Xms1G -Xmx2G -Dfml.readTimeout=5 @java9args.txt -jar lwjgl3ify-forgePatches.jar nogui"
+            startup-timeout: 120
+            settle-timeout: 60
           - java-version: 8
             zip-variant: "server-java8"
             java-args: "-Xms1G -Xmx2500m -XX:+UseStringDeduplication -XX:+UseCompressedOops -XX:+UseCodeCacheFlushing -Dfml.readTimeout=5 -jar forge-1.7.10-10.13.4.1614-1.7.10-universal.jar nogui"
+            startup-timeout: 240
+            settle-timeout: 120
     steps:
       - name: Check out repository for scripts
         uses: actions/checkout@v5
@@ -216,8 +220,13 @@ jobs:
           cp scripts/* /tmp/
 
       - name: Run pack test
-        timeout-minutes: 30
-        run: bash /tmp/test_ci_server_lifetime.sh /tmp/gtnh-unpacked "${{ matrix.java-args }}"
+        timeout-minutes: 10
+        env:
+          WORKDIR: "/tmp/gtnh-unpacked"
+          JAVA_ARGS: "${{ matrix.java-args }}"
+          STARTUP_TIMEOUT: ${{ matrix.startup-timeout }}
+          SETTLE_TIMEOUT: ${{ matrix.settle-timeout }}
+        run: bash /tmp/test_ci_server_lifetime.sh
 
 
   upload:
