@@ -166,6 +166,15 @@ jobs:
   test:
     needs: build
     runs-on: ubuntu-24.04
+    strategy:
+      matrix:
+        include:
+          - java-version: 25
+            zip-variant: "server-java17-25"
+            java-args: "-Xms1G -Xmx2G -Dfml.readTimeout=5 @java9args.txt -jar lwjgl3ify-forgePatches.jar nogui"
+          - java-version: 8
+            zip-variant: "server-java8"
+            java-args: "-Xms1G -Xmx2G -XX:+UseStringDeduplication -XX:+UseCompressedOops -XX:+UseCodeCacheFlushing -Dfml.readTimeout=5 -jar forge-1.7.10-10.13.4.1614-1.7.10-universal.jar nogui"
     steps:
       - name: Check out repository for scripts
         uses: actions/checkout@v5
@@ -182,15 +191,15 @@ jobs:
 
       - name: Unpack server artifact
         run: |
-          mkdir -p /tmp/gtnh-server-unpacked
-          unzip -o "GTNH-daily-${{ needs.build.outputs.today }}-server-java17-25.zip" -d /tmp/gtnh-server-unpacked/
-          chmod -R u+rX /tmp/gtnh-server-unpacked
+          mkdir -p /tmp/gtnh-unpacked
+          unzip -o "GTNH-daily-${{ needs.build.outputs.today }}-${{ matrix.zip-variant }}.zip" -d /tmp/gtnh-unpacked/
+          chmod -R u+rX /tmp/gtnh-unpacked
 
       - name: Install Java
         uses: actions/setup-java@dded0888837ed1f317902acf8a20df0ad188d165
         with:
           distribution: temurin
-          java-version: 25
+          java-version: ${{ matrix.java-version }}
         
       - name: Install RCON
         shell: bash
@@ -203,12 +212,12 @@ jobs:
       
       - name: Prepare files for ci run
         run: |
-          sed -i 's|enable-rcon=false|enable-rcon=true\nrcon.password=whoahaplaintextpassword\nrcon.port=25575|' /tmp/gtnh-server-unpacked/server.properties
+          sed -i 's|enable-rcon=false|enable-rcon=true\nrcon.password=whoahaplaintextpassword\nrcon.port=25575|' /tmp/gtnh-unpacked/server.properties
           cp scripts/* /tmp/
 
       - name: Run pack test
         timeout-minutes: 30
-        run: bash /tmp/test_ci_server_lifetime.sh /tmp/gtnh-server-unpacked
+        run: bash /tmp/test_ci_server_lifetime.sh /tmp/gtnh-unpacked "${{ matrix.java-args }}"
 
 
   upload:

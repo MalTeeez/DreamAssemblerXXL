@@ -4,13 +4,15 @@ set -euo pipefail
 # Taken from https://github.com/MalTeeez/packscripts-auto-builds/blob/gtnh-daily/packaging/scripts/entrypoint.sh
 
 WORKDIR=$1
+JAVA_ARGS=$2
+
 cd $WORKDIR
 
 echo "Agreeing to eula"
 sed -i "s|eula=false|eula=true|g" eula.txt
 
-echo "Starting server..."
-java -Xms1G -Xmx2G -Dfml.readTimeout=5 @java9args.txt -jar lwjgl3ify-forgePatches.jar nogui > server.log 2>&1 &
+echo "Starting server with 'java $JAVA_ARGS'"
+java $JAVA_ARGS > server.log 2>&1 &
 SERVER_PID=$!
 
 tail -f server.log &
