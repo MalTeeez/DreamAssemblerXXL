@@ -193,9 +193,13 @@ jobs:
           java-version: 25
         
       - name: Install RCON
+        shell: bash
         run: |
-          curl -sSL https://github.com/itzg/rcon-cli/releases/download/1.7.4/rcon-cli_1.7.4_linux_amd64.tar.gz \
-            | tar -xz -C /usr/local/bin rcon-cli
+          set -euo pipefail
+          curl -sSL -o rcon-cli.tar.gz https://github.com/itzg/rcon-cli/releases/download/1.7.5/rcon-cli_1.7.5_linux_amd64.tar.gz
+          echo "587f771ae5d4424eb6c15cdf76634049cb29c3ff2b2020500fe26c64c66aab62  rcon-cli.tar.gz" | sha256sum -c -
+          tar -xz -C /usr/local/bin -f rcon-cli.tar.gz rcon-cli
+          rm rcon-cli.tar.gz
       
       - name: Prepare files for ci run
         run: |
