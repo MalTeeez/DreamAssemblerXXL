@@ -7372,7 +7372,7 @@
     },
     {
       "name": "AdventureBackpack2",
-      "latest_version": "1.4.19-GTNH",
+      "latest_version": "1.4.21-GTNH",
       "private": false,
       "versions": [
         {
@@ -8003,6 +8003,26 @@
           "filename": "adventurebackpack-1.4.19-GTNH.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/AdventureBackpack2/releases/assets/406316953",
           "browser_download_url": "https://github.com/GTNewHorizons/AdventureBackpack2/releases/download/1.4.19-GTNH/adventurebackpack-1.4.19-GTNH.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "1.4.20-GTNH",
+          "changelog": "## What's Changed\n* Compat with TinkersConstruct/modern-toolstation-behavior by @FrostyFire1 in https://github.com/GTNewHorizons/AdventureBackpack2/pull/51\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/AdventureBackpack2/compare/1.4.19-GTNH...1.4.20-GTNH\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-04T13:12:20+00:00",
+          "filename": "adventurebackpack-1.4.20-GTNH.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/AdventureBackpack2/releases/assets/438304236",
+          "browser_download_url": "https://github.com/GTNewHorizons/AdventureBackpack2/releases/download/1.4.20-GTNH/adventurebackpack-1.4.20-GTNH.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "1.4.21-GTNH",
+          "changelog": "## What's Changed\n* Update Portuguese localization for adventure backpack by @Xlr11 in https://github.com/GTNewHorizons/AdventureBackpack2/pull/50\n\n## New Contributors\n* @Xlr11 made their first contribution in https://github.com/GTNewHorizons/AdventureBackpack2/pull/50\n\n**Full Changelog**: https://github.com/GTNewHorizons/AdventureBackpack2/compare/1.4.20-GTNH...1.4.21-GTNH\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-04T13:40:06+00:00",
+          "filename": "adventurebackpack-1.4.21-GTNH.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/AdventureBackpack2/releases/assets/438323639",
+          "browser_download_url": "https://github.com/GTNewHorizons/AdventureBackpack2/releases/download/1.4.21-GTNH/adventurebackpack-1.4.21-GTNH.jar",
           "extra_assets": []
         }
       ],
@@ -36291,7 +36311,7 @@
     },
     {
       "name": "Botania",
-      "latest_version": "1.13.24-GTNH-pre",
+      "latest_version": "1.13.21-GTNH",
       "private": false,
       "versions": [
         {
@@ -176761,7 +176781,7 @@
     },
     {
       "name": "TinkersConstruct",
-      "latest_version": "1.14.85-GTNH-pre",
+      "latest_version": "1.14.86-GTNH",
       "private": false,
       "versions": [
         {
@@ -179322,6 +179342,16 @@
           "filename": "TConstruct-1.14.85-GTNH-pre.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/TinkersConstruct/releases/assets/438185583",
           "browser_download_url": "https://github.com/GTNewHorizons/TinkersConstruct/releases/download/1.14.85-GTNH-pre/TConstruct-1.14.85-GTNH-pre.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "1.14.86-GTNH",
+          "changelog": "## What's Changed\n* Modern toolstation behavior by @FrostyFire1 in https://github.com/GTNewHorizons/TinkersConstruct/pull/294\n\n## New Contributors\n* @FrostyFire1 made their first contribution in https://github.com/GTNewHorizons/TinkersConstruct/pull/294\n\n**Full Changelog**: https://github.com/GTNewHorizons/TinkersConstruct/compare/1.14.80-GTNH...1.14.86-GTNH\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-04T12:55:48+00:00",
+          "filename": "TConstruct-1.14.86-GTNH.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/TinkersConstruct/releases/assets/438292062",
+          "browser_download_url": "https://github.com/GTNewHorizons/TinkersConstruct/releases/download/1.14.86-GTNH/TConstruct-1.14.86-GTNH.jar",
           "extra_assets": []
         }
       ],
@@ -187990,6 +188020,6 @@
   ],
   "latest_experimental": 136,
   "latest_successful_experimental": 136,
-  "latest_daily": 553,
-  "latest_successful_daily": 553
+  "latest_daily": 1014,
+  "latest_successful_daily": 1014
 }
