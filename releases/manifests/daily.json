@@ -1,11 +1,11 @@
 {
   "version": "daily",
   "last_version": "previous_daily",
-  "last_updated": "2026-06-04T09:16:45.366194",
+  "last_updated": "2026-06-04T15:01:43.979726",
   "config": "2.9.0-nightly-2026-06-04",
   "github_mods": {
     "AdventureBackpack2": {
-      "version": "1.4.19-GTNH",
+      "version": "1.4.21-GTNH",
       "side": "BOTH"
     },
     "AE2FluidCraft-Rework": {
@@ -513,7 +513,7 @@
       "side": "CLIENT"
     },
     "TinkersConstruct": {
-      "version": "1.14.80-GTNH",
+      "version": "1.14.86-GTNH",
       "side": "BOTH"
     },
     "TinkersMechworks": {
