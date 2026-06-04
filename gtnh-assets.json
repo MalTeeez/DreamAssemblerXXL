@@ -110054,7 +110054,7 @@
     },
     {
       "name": "LogisticsPipes",
-      "latest_version": "1.5.24-GTNH",
+      "latest_version": "1.5.25-GTNH",
       "private": false,
       "versions": [
         {
@@ -111307,6 +111307,16 @@
           "filename": "logisticspipes-1.5.24-GTNH.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/LogisticsPipes/releases/assets/407721235",
           "browser_download_url": "https://github.com/GTNewHorizons/LogisticsPipes/releases/download/1.5.24-GTNH/logisticspipes-1.5.24-GTNH.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "1.5.25-GTNH",
+          "changelog": "## What's Changed\n* Fix MUI2 C2S issues by @tiffit in https://github.com/GTNewHorizons/LogisticsPipes/pull/123\n\n## New Contributors\n* @tiffit made their first contribution in https://github.com/GTNewHorizons/LogisticsPipes/pull/123\n\n**Full Changelog**: https://github.com/GTNewHorizons/LogisticsPipes/compare/1.5.24-GTNH...1.5.25-GTNH\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-04T17:48:29+00:00",
+          "filename": "logisticspipes-1.5.25-GTNH.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/LogisticsPipes/releases/assets/438515380",
+          "browser_download_url": "https://github.com/GTNewHorizons/LogisticsPipes/releases/download/1.5.25-GTNH/logisticspipes-1.5.25-GTNH.jar",
           "extra_assets": []
         }
       ],
@@ -159637,7 +159647,7 @@
     },
     {
       "name": "Salis-Arcana",
-      "latest_version": "1.1.62-GTNH",
+      "latest_version": "1.1.63-GTNH",
       "private": false,
       "versions": [
         {
@@ -160238,6 +160248,16 @@
           "filename": "salisarcana-1.1.62-GTNH.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/Salis-Arcana/releases/assets/434403341",
           "browser_download_url": "https://github.com/GTNewHorizons/Salis-Arcana/releases/download/1.1.62-GTNH/salisarcana-1.1.62-GTNH.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "1.1.63-GTNH",
+          "changelog": "**Full Changelog**: https://github.com/GTNewHorizons/Salis-Arcana/compare/1.1.62-GTNH...1.1.63-GTNH\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-04T17:59:05+00:00",
+          "filename": "salisarcana-1.1.63-GTNH.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/Salis-Arcana/releases/assets/438523506",
+          "browser_download_url": "https://github.com/GTNewHorizons/Salis-Arcana/releases/download/1.1.63-GTNH/salisarcana-1.1.63-GTNH.jar",
           "extra_assets": []
         }
       ],
@@ -188020,6 +188040,6 @@
   ],
   "latest_experimental": 136,
   "latest_successful_experimental": 136,
-  "latest_daily": 1014,
-  "latest_successful_daily": 1014
+  "latest_daily": 1020,
+  "latest_successful_daily": 1020
 }
