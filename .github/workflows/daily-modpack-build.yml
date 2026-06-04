@@ -15,17 +15,14 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v5
         with:
-          token: ${{ secrets.NIGHTLY_GITHUB_TOKEN }}
           fetch-depth: 0
           ref: master
+
       - name: Set up python
         id: setup-python
         uses: actions/setup-python@v6
         with:
           python-version: 3.10.5
-      - name: Setup private repo access token
-        shell: bash
-        run: echo "${{ secrets.NIGHTLY_GITHUB_TOKEN }}" > ~/.github_personal_token
 
       # install & configure poetry
       - name: Install Poetry
@@ -67,7 +64,6 @@ jobs:
           key: daxxl-daily-${{ runner.os }}-${{ steps.date.outputs.cachedate }}
           restore-keys: |
             daxxl-daily-${{ runner.os }}-
-
 
       - name: Build modpack archives
         shell: bash
@@ -166,6 +162,7 @@ jobs:
           if-no-files-found: error
           retention-days: 1
 
+
   test:
     needs: build
     runs-on: ubuntu-24.04
@@ -173,7 +170,6 @@ jobs:
       - name: Check out repository for scripts
         uses: actions/checkout@v5
         with:
-          token: ${{ secrets.NIGHTLY_GITHUB_TOKEN }}
           fetch-depth: 0
           ref: master
           sparse-checkout: 
@@ -221,7 +217,6 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v5
         with:
-          token: ${{ secrets.NIGHTLY_GITHUB_TOKEN }}
           fetch-depth: 0
           ref: master
 
@@ -230,7 +225,6 @@ jobs:
         with:
           name: daily-build-bundle
 
-          
       # Upload the actual variants of the modpack now that we've tested them
       - name: Upload manifest
         uses: actions/upload-artifact@v7
@@ -281,4 +275,3 @@ jobs:
           tag="daily-${{ github.run_number }}"
           git tag "$tag"
           git push origin "$tag"
-
