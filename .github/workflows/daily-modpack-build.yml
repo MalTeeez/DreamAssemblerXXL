@@ -174,7 +174,7 @@ jobs:
             java-args: "-Xms1G -Xmx2G -Dfml.readTimeout=5 @java9args.txt -jar lwjgl3ify-forgePatches.jar nogui"
           - java-version: 8
             zip-variant: "server-java8"
-            java-args: "-Xms1G -Xmx2.5G -XX:+UseStringDeduplication -XX:+UseCompressedOops -XX:+UseCodeCacheFlushing -Dfml.readTimeout=5 -jar forge-1.7.10-10.13.4.1614-1.7.10-universal.jar nogui"
+            java-args: "-Xms1G -Xmx2500m -XX:+UseStringDeduplication -XX:+UseCompressedOops -XX:+UseCodeCacheFlushing -Dfml.readTimeout=5 -jar forge-1.7.10-10.13.4.1614-1.7.10-universal.jar nogui"
     steps:
       - name: Check out repository for scripts
         uses: actions/checkout@v5
