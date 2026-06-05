@@ -17,6 +17,7 @@ jobs:
         with:
           fetch-depth: 0
           ref: master
+          persist-credentials: none
 
       - name: Set up python
         id: setup-python
@@ -185,6 +186,7 @@ jobs:
         with:
           fetch-depth: 0
           ref: master
+          persist-credentials: false
           sparse-checkout: 
             scripts/
 
