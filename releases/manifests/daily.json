@@ -1,7 +1,7 @@
 {
   "version": "daily",
   "last_version": "previous_daily",
-  "last_updated": "2026-06-04T15:01:43.979726",
+  "last_updated": "2026-06-04T21:03:36.296548",
   "config": "2.9.0-nightly-2026-06-04",
   "github_mods": {
     "AdventureBackpack2": {
@@ -277,7 +277,7 @@
       "side": "BOTH"
     },
     "LogisticsPipes": {
-      "version": "1.5.24-GTNH",
+      "version": "1.5.25-GTNH",
       "side": "BOTH"
     },
     "LootGames": {
@@ -745,7 +745,7 @@
       "side": "BOTH"
     },
     "Salis-Arcana": {
-      "version": "1.1.62-GTNH",
+      "version": "1.1.63-GTNH",
       "side": "BOTH"
     },
     "Darkerer": {

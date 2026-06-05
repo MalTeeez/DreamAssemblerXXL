@@ -3903,10 +3903,11 @@ DreamAssemblerXXL wasn't able to find the changelog related to this update. It i
 >* Add first gui to select chisel block by @DarkShadow44 in https://github.com/GTNewHorizons/LittleTiles/pull/29 (1.6.2)
 >* Update MUI2 by @DarkShadow44 in https://github.com/GTNewHorizons/LittleTiles/pull/32 (1.6.2)
 
-# Updated - LogisticsPipes - 1.4.24-GTNH --> 1.5.24-GTNH
-**Full Changelog**: https://github.com/GTNewHorizons/LogisticsPipes/compare/1.4.24-GTNH...1.5.24-GTNH
+# Updated - LogisticsPipes - 1.4.24-GTNH --> 1.5.25-GTNH
+**Full Changelog**: https://github.com/GTNewHorizons/LogisticsPipes/compare/1.4.24-GTNH...1.5.25-GTNH
 
 ## What's Changed:
+>* Fix MUI2 C2S issues by @tiffit in https://github.com/GTNewHorizons/LogisticsPipes/pull/123 (1.5.25-GTNH)
 >* [Memory-opti:fix leak] fix leak in net handler by just copying fml code as the TODO suggests by @Alexdoru in https://github.com/GTNewHorizons/LogisticsPipes/pull/122 (1.5.24-GTNH)
 >* Fix Hud Glasses not rendering crafting pipe results after relogging by @jude123412 in https://github.com/GTNewHorizons/LogisticsPipes/pull/112 (1.5.23-GTNH)
 >* Localize Energy values for Power Provider by @Ranzuu in https://github.com/GTNewHorizons/LogisticsPipes/pull/120 (1.5.20-GTNH)
@@ -4923,8 +4924,8 @@ DreamAssemblerXXL wasn't able to find the changelog related to this update. It i
 >* Fix Rotation in East/West Direction by @Yoshy2002 in https://github.com/GTNewHorizons/SGCraft/pull/22 (1.4.8-GTNH)
 >* Localization of gui elements by @Ranzuu in https://github.com/GTNewHorizons/SGCraft/pull/21 (1.4.7-GTNH)
 
-# Updated - Salis-Arcana - 1.1.33-GTNH --> 1.1.62-GTNH
-**Full Changelog**: https://github.com/GTNewHorizons/Salis-Arcana/compare/1.1.33-GTNH...1.1.62-GTNH
+# Updated - Salis-Arcana - 1.1.33-GTNH --> 1.1.63-GTNH
+**Full Changelog**: https://github.com/GTNewHorizons/Salis-Arcana/compare/1.1.33-GTNH...1.1.63-GTNH
 
 ## What's Changed:
 >* Merge from main by @Dream-Master in https://github.com/GTNewHorizons/Salis-Arcana/pull/8 (1.1.60-GTNH)
