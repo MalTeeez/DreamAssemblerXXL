@@ -18,6 +18,12 @@ DUAL_CLIENT_LOG="$RUN_DIR/dual_test_client.log"
 
 rc=0
 
+# Sets a non-zero exit code, with the provided reason
+fail() {
+  echo "FAIL: $*"
+  rc=1
+}
+
 # Exit code recorded by run_with_exit.sh when the game closed
 if [ -e "$CLIENT_EXIT_FLAG" ]; then
   exit_code=$(cat "$CLIENT_EXIT_FLAG")
@@ -30,15 +36,16 @@ echo "client exit code: $exit_code"
 # the client wouldn't close nicely, otherwise a non-zero code is a failure.
 case "$exit_code" in
   0) ;;
-  137|143) [ -e "$CLIENT_KILLED_FLAG" ] || rc=1 ;;
-  *) rc=1 ;;
+  137|143)
+    [ -e "$CLIENT_KILLED_FLAG" ] || fail "client exited with $exit_code but we never signalled it"
+    ;;
+  *) fail "client exited with non-zero code: $exit_code" ;;
 esac
 
 # Progress markers dropped by HeadlessNH as the client reaches each stage
 for marker in "$CLIENT_LOADED_FLAG" "$CLIENT_JOINED_FLAG" "$CLIENT_SINGLEP_FLAG"; do
   if [ ! -e "$marker" ]; then
-    echo "headlessnh marker missing: $marker -- client never reached the stage?"
-    rc=1
+    fail "headlessnh marker missing: $marker -- client never reached the stage?"
   fi
 done
 
@@ -46,44 +53,36 @@ done
 if [ -e "$DUAL_EXIT_FLAG" ]; then
   dual_exit=$(cat "$DUAL_EXIT_FLAG")
   echo "dual test exit code: $dual_exit"
-  [ "$dual_exit" = "0" ] || rc=1
+  [ "$dual_exit" = "0" ] || fail "dual tests exited with non-zero code: $dual_exit"
 else
-  echo "dual test exit flag missing: $DUAL_EXIT_FLAG -- dual tests never ran"
-  rc=1
+  fail "dual test exit flag missing: $DUAL_EXIT_FLAG -- dual tests never ran"
 fi
 
 # Crash reports
 crash_reports=("$CLIENT_MC_DIR/crash-reports/crash"*.txt)
 if [ "${#crash_reports[@]}" -gt 0 ]; then
   latest_crash_report="${crash_reports[-1]}"
-  echo "latest crash report detected ${latest_crash_report##*/}:"
+  fail "found client crash report at ${latest_crash_report##*/}:"
   cat "$latest_crash_report"
-  rc=1
 fi
 
 # JVM fatal error logs
 hs_err_logs=("$CLIENT_MC_DIR/hs_err_pid"*.log)
 if [ "${#hs_err_logs[@]}" -gt 0 ]; then
   latest_hs_err="${hs_err_logs[-1]}"
-  echo "JVM fatal error log detected ${latest_hs_err##*/}:"
+  fail "JVM fatal error log detected ${latest_hs_err##*/}:"
   cat "$latest_hs_err"
-  rc=1
 fi
 
-if [ -r "$CLIENT_LOG" ]; then
-  # idk can't find anything that we want to heck the logs for, but would do it here
-  echo ""
-else
-  echo "client log missing or unreadable: $CLIENT_LOG"
-  rc=1
+if [ ! -r "$CLIENT_LOG" ]; then
+  fail "client log missing or unreadable: $CLIENT_LOG"
 fi
 
 # Client side of what was emitted during the dual tests
 if [ -r "$DUAL_CLIENT_LOG" ]; then
   if grep --quiet --fixed-strings 'PLACEHOLDER_CLIENT_DUAL_ERROR' "$DUAL_CLIENT_LOG"; then
-    echo "dual test client log flagged a problem:"
+    fail "dual test client log flagged a problem:"
     grep -n --fixed-strings 'PLACEHOLDER_CLIENT_DUAL_ERROR' "$DUAL_CLIENT_LOG"
-    rc=1
   fi
 else
   echo "dual test client log missing or unreadable: $DUAL_CLIENT_LOG"

@@ -322,6 +322,12 @@ jobs:
       - name: Stop server
         run: bash scripts/tests/orchestrator.sh stop-server
 
+      - name: Print logs from dual run - client
+        run: cat ${{ env.WORK_DIR }}/run/dual_test_client.log
+
+      - name: Print logs from dual run - server
+        run: cat ${{ env.WORK_DIR }}/run/dual_test_server.log
+
       - name: Verify server
         if: always()
         run: bash scripts/tests/orchestrator.sh verify-server

@@ -127,10 +127,12 @@ tail -n +1 -F "$CLIENT_LOG" 2>/dev/null &
 TAIL_PID=$!
 
 # focus window, --sync blocks until the window maps
+echo "XDOTOOL WINDOWS:" && xdotool search --name "" getwindowname %@
 if timeout ${CLIENT_FOCUS_TIMEOUT:-60} xdotool search --sync --onlyvisible --name "$CLIENT_WINDOW_NAME" windowfocus 2>/dev/null; then
   echo "focused '$CLIENT_WINDOW_NAME' window"
 else
-  echo "WARNING: no '$CLIENT_WINDOW_NAME' window to focus within 60s"
+  echo "XDOTOOL WINDOWS:" && xdotool search --name "" getwindowname %@
+  echo "WARNING: no '$CLIENT_WINDOW_NAME' window to focus within ${CLIENT_FOCUS_TIMEOUT:-60}s"
 fi
 
 # 4. close game when last marker appears, break if it takes too long
