@@ -18,6 +18,13 @@ RCON_HOST="${RCON_HOST:-localhost}"
 RCON_PORT="${RCON_PORT:-25575}"
 RCON_PASSWORD="${RCON_PASSWORD:?RCON_PASSWORD must be set}"
 
+HQA_RESULT="$RUN_DIR/horizonqa-result.json"
+HQA_RESULT_TIMEOUT="${HQA_RESULT_TIMEOUT:-45}" # Has to be lower than -Dheadlessnh.gate.timeout passed to client
+
+rcon() {
+  rcon-cli --host "$RCON_HOST" --port "$RCON_PORT" --password "$RCON_PASSWORD" $*
+}
+
 # Capture whatever each side emits for the length of this script (-n 0: new lines only)
 tail -n 0 -F "$RUN_DIR/server.log" > "$RUN_DIR/dual_test_server.log" 2>/dev/null &
 server_tail_pid=$!
@@ -38,6 +45,11 @@ else
   rc=1
 fi
 
+# Setup & run HQA tests
+rcon setblock 1 -2 129 -2
+rcon teleport CI -2 131 -2
+rcon horizonqa runall
+
 crash_reports=("$CLIENT_MC_DIR/crash-reports/crash"*.txt)
 if [ "${#crash_reports[@]}" -gt 0 ]; then
   echo "discovered new client crash report while connected: ${crash_reports[-1]##*/}"
@@ -47,8 +59,21 @@ fi
 # Let the log lines each side emitted in reaction settle into the tails
 sleep 2
 
-# TODO: Wait for HQA report file to appear here
+# Wait for the HQA report file to appear before completing
+waited=0
+while [ ! -f "$HQA_RESULT" ]; do
+  if [ "$waited" -ge "$HQA_RESULT_TIMEOUT" ]; then
+    echo "timed out after ${HQA_RESULT_TIMEOUT}s waiting for $HQA_RESULT"
+    rc=1
+    break
+  fi
+  sleep 1
+  waited=$((waited + 1))
+done
+if [ -f "$HQA_RESULT" ]; then
+  echo "found HQA result after ${waited}s: $HQA_RESULT"
+fi
 
 echo "$rc" > "$DUAL_EXIT_FLAG"
-[ "$rc" -eq 0 ] && echo "DUAL: pass" || echo "DUAL: fail"
+[ "$rc" -eq 0 ] && echo "DUAL TESTS: initial pass" || echo "DUAL TESTS: initial fail"
 exit "$rc"

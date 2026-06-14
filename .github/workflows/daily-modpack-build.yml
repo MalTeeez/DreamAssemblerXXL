@@ -288,7 +288,7 @@ jobs:
           --jvm-arg "-Dheadlessnh.delay.singleplayer=10000"
           --jvm-arg "-Dheadlessnh.gate.mainmenu=server.ready"
           --jvm-arg "-Dheadlessnh.gate.serverloaded=serverloaded.gate"
-          --jvm-arg "-Dheadlessnh.gate.timeout=30000"
+          --jvm-arg "-Dheadlessnh.gate.timeout=60000"
           --game-dir ${{ env.WORK_DIR }}/client/.minecraft
 
       - name: Add HeadlessNH to client mods
@@ -327,6 +327,16 @@ jobs:
 
       - name: Print logs from dual run - server
         run: cat ${{ env.WORK_DIR }}/run/dual_test_server.log
+
+      # TODO: remove when inspected
+      - name: Upload HorizonQA result
+        if: always()
+        continue-on-error: true
+        uses: actions/upload-artifact@v7
+        with:
+          name: horizonqa-result-java${{ matrix.java-version }}
+          path: ${{ env.WORK_DIR }}/run/horizonqa-result.json
+          if-no-files-found: warn
 
       - name: Verify server
         if: always()
