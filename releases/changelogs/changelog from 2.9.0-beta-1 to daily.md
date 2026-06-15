@@ -6,11 +6,13 @@
 >* Allow to copy Fluid Interface fluid config to Memory Card by @Kogepan229 in https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/443 (1.5.90-gtnh)
 >* Make Fluid Cells storable in Item Cells again by @Inphysible in https://github.com/GTNewHorizons/AE2FluidCraft-Rework/pull/441 (1.5.89-gtnh)
 
-# Updated - Angelica - 2.1.32 --> 2.1.37
+# Updated - Angelica - 2.1.32 --> 2.1.38
 Mod is client-side only.
-**Full Changelog**: https://github.com/GTNewHorizons/Angelica/compare/2.1.32...2.1.37
+**Full Changelog**: https://github.com/GTNewHorizons/Angelica/compare/2.1.32...2.1.38
 
 ## What's Changed:
+>* Rework DH matrix handling by @mitchej123 in https://github.com/GTNewHorizons/Angelica/pull/1861 (2.1.38)
+>* Force invalidate dh depth tex when reconnecting DH Textures by @mitchej123 in https://github.com/GTNewHorizons/Angelica/pull/1862 (2.1.38)
 >* A few redirects for calls that DH was using that we weren't redirecting by @mitchej123 in https://github.com/GTNewHorizons/Angelica/pull/1859 (2.1.37)
 >* VAO stuff by @sisyphussy in https://github.com/GTNewHorizons/Angelica/pull/1858 (2.1.37)
 >* Fix enchant glint fix so that it looks proper by @Eclipse-Sol in https://github.com/GTNewHorizons/Angelica/pull/1856 (2.1.37)
