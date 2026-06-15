@@ -15,6 +15,8 @@ SERVER_DIR="${SERVER_DIR:?SERVER_DIR must be set}"
 SERVER_LOG="$RUN_DIR/server.log"
 DUAL_SERVER_LOG="$RUN_DIR/dual_test_server.log"
 
+HQA_RESULT_JSON="$RUN_DIR/horizonqa-result.json"
+
 rc=0
 
 # Sets a non-zero exit code, with the provided reason
@@ -72,7 +74,7 @@ if [ -r "$SERVER_LOG" ]; then
     if [ -n "$dupes" ]; then
       fail "server had duplicate files, environment cant be guaranteed to contain correct versions:"
       echo "$dupes"
-    fi
+    fi<
   fi
 
   if grep --quiet --fixed-strings 'Exception stopping the server' "$SERVER_LOG"; then
@@ -84,14 +86,19 @@ else
 fi
 
 # Server side of what was emitted during the dual tests
-if [ -r "$DUAL_SERVER_LOG" ]; then
-  if grep --quiet --fixed-strings 'PLACEHOLDER_SERVER_DUAL_ERROR' "$DUAL_SERVER_LOG"; then
-    fail "dual test server log flagged a problem:"
-    grep -n --fixed-strings 'PLACEHOLDER_SERVER_DUAL_ERROR' "$DUAL_SERVER_LOG"
+if [ -e "$HQA_RESULT_JSON" ]; then
+  failed_tests=$(jq '.counts.failed // 0' "$HQA_RESULT_JSON")
+  if ! [[ "$failed_tests" =~ ^[0-9]+$ ]]; then
+    fail "could not read HQA test failure count from $HQA_RESULT_JSON (got: '$failed_tests')"
+  elif [ "$failed_tests" -ne 0 ]; then
+    fail "HQA tests had $failed_tests failures"
+  else
+    echo "HQA tests had no failures!"
   fi
 else
-  echo "dual test server log missing or unreadable: $DUAL_SERVER_LOG"
+  fail "HQA execution result json at $HQA_RESULT_JSON is missing"
 fi
+
 
 [ "$rc" -eq 0 ] && echo "SERVER: pass" || echo "SERVER: fail"
 exit "$rc"

@@ -18,11 +18,14 @@ RCON_HOST="${RCON_HOST:-localhost}"
 RCON_PORT="${RCON_PORT:-25575}"
 RCON_PASSWORD="${RCON_PASSWORD:?RCON_PASSWORD must be set}"
 
-HQA_RESULT="$RUN_DIR/horizonqa-result.json"
+HQA_RESULT_JSON="$RUN_DIR/horizonqa-result.json"
 HQA_RESULT_TIMEOUT="${HQA_RESULT_TIMEOUT:-45}" # Has to be lower than -Dheadlessnh.gate.timeout passed to client
 
 rcon() {
-  rcon-cli --host "$RCON_HOST" --port "$RCON_PORT" --password "$RCON_PASSWORD" $*
+  if ! rcon-cli --host "$RCON_HOST" --port "$RCON_PORT" --password "$RCON_PASSWORD" "$@"; then
+    echo "rcon command failed: $*"
+    rc=1
+  fi
 }
 
 # Capture whatever each side emits for the length of this script (-n 0: new lines only)
@@ -35,7 +38,7 @@ trap 'kill "$server_tail_pid" "$client_tail_pid" 2>/dev/null' EXIT
 rc=0
 
 # Ask the server who's online
-players_line=$(rcon-cli --host "$RCON_HOST" --port "$RCON_PORT" --password "$RCON_PASSWORD" list 2>&1)
+players_line=$(rcon list 2>&1)
 echo "server 'list' -> $players_line"
 online=$(printf '%s' "$players_line" | grep -oiE 'there are [0-9]+' | grep -oE '[0-9]+' | head -1)
 if [ -n "$online" ] && [ "$online" -ge 1 ]; then
@@ -46,9 +49,9 @@ else
 fi
 
 # Setup & run HQA tests
-rcon setblock 1 -2 129 -2
-rcon teleport CI -2 131 -2
-rcon horizonqa runall
+rcon "setblock 1 -2 129 -2"
+rcon "teleport CI -2 131 -2"
+rcon "horizonqa runall"
 
 crash_reports=("$CLIENT_MC_DIR/crash-reports/crash"*.txt)
 if [ "${#crash_reports[@]}" -gt 0 ]; then
@@ -61,17 +64,17 @@ sleep 2
 
 # Wait for the HQA report file to appear before completing
 waited=0
-while [ ! -f "$HQA_RESULT" ]; do
+while [ ! -f "$HQA_RESULT_JSON" ]; do
   if [ "$waited" -ge "$HQA_RESULT_TIMEOUT" ]; then
-    echo "timed out after ${HQA_RESULT_TIMEOUT}s waiting for $HQA_RESULT"
+    echo "timed out after ${HQA_RESULT_TIMEOUT}s waiting for $HQA_RESULT_JSON"
     rc=1
     break
   fi
   sleep 1
   waited=$((waited + 1))
 done
-if [ -f "$HQA_RESULT" ]; then
-  echo "found HQA result after ${waited}s: $HQA_RESULT"
+if [ -f "$HQA_RESULT_JSON" ]; then
+  echo "found HQA result after ${waited}s: $HQA_RESULT_JSON"
 fi
 
 echo "$rc" > "$DUAL_EXIT_FLAG"

@@ -64,7 +64,7 @@ run_dual_tests() {
     waited=$((waited + 1))
   done
 
-  bash "$SCRIPT_DIR/dual_tests.sh" || true
+  bash "$SCRIPT_DIR/dual_tests.sh" > "$RUN_DIR/dual_test_executor.log" 2>&1 || true
 
   : > "$CLIENT_GATE_SERVERLOADED"
   echo "dropped serverloaded gate -> $CLIENT_GATE_SERVERLOADED"

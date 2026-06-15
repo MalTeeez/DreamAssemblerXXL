@@ -322,28 +322,22 @@ jobs:
       - name: Stop server
         run: bash scripts/tests/orchestrator.sh stop-server
 
-      - name: Print logs from dual run - client
-        run: cat ${{ env.WORK_DIR }}/run/dual_test_client.log
-
-      - name: Print logs from dual run - server
-        run: cat ${{ env.WORK_DIR }}/run/dual_test_server.log
-
-      # TODO: remove when inspected
-      - name: Upload HorizonQA result
-        if: always()
-        continue-on-error: true
-        uses: actions/upload-artifact@v7
-        with:
-          name: horizonqa-result-java${{ matrix.java-version }}
-          path: ${{ env.WORK_DIR }}/run/horizonqa-result.json
-          if-no-files-found: warn
+      - name: Print logs from dual run
+        if: success() || failure()
+        run: |
+         echo "--- Logs from dual test : executor ---"
+         cat ${{ env.WORK_DIR }}/run/dual_test_executor.log
+         echo "--- Logs from dual test : client ---"
+         cat ${{ env.WORK_DIR }}/run/dual_test_client.log
+         echo "--- Logs from dual test : server ---"
+         cat ${{ env.WORK_DIR }}/run/dual_test_server.log
 
       - name: Verify server
-        if: always()
+        if: success() || failure()
         run: bash scripts/tests/orchestrator.sh verify-server
 
       - name: Verify client
-        if: always()
+        if: success() || failure()
         run: bash scripts/tests/orchestrator.sh verify-client
 
       # GH markdown seems to only embed media from CSP-allowlisted domains, which does not include artifacts.
@@ -351,7 +345,7 @@ jobs:
       # so we use a rolling prerelease as the media host for the summary embeds.
       - name: Publish screenshots to rolling release
         id: publish-media
-        if: always()
+        if: success() || failure()
         shell: bash
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -419,6 +413,27 @@ jobs:
 
           echo "" >> "$GITHUB_STEP_SUMMARY"
           echo "</details>" >> "$GITHUB_STEP_SUMMARY"
+
+          {
+            echo '<details open><summary><b>HQA test results (Java ${{ matrix.java-version }})</b></summary>'
+            echo ''
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Publish HQA test report
+        uses: mikepenz/action-junit-report@3a81627bfac62268172037048872e8ebd4207e6d
+        if: success() || failure()
+        with:
+          report_paths: "${{ env.WORK_DIR }}/run/horizonqa*.xml"
+          detailed_summary: true
+          include_passed: true
+
+      - name: Close HQA results block
+        if: success() || failure()
+        run: |
+          {
+            echo ''
+            echo '</details>'
+          } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Final important summary append
         shell: bash
