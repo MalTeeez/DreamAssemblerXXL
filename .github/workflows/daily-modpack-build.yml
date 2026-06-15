@@ -413,27 +413,29 @@ jobs:
 
           echo "" >> "$GITHUB_STEP_SUMMARY"
           echo "</details>" >> "$GITHUB_STEP_SUMMARY"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
 
-          {
-            echo '<details open><summary><b>HQA test results (Java ${{ matrix.java-version }})</b></summary>'
-            echo ''
-          } >> "$GITHUB_STEP_SUMMARY"
-
-      - name: Publish HQA test report
+      - name: Format HQA test report
+        id: hqa-format
         uses: mikepenz/action-junit-report@3a81627bfac62268172037048872e8ebd4207e6d
         if: success() || failure()
         with:
           report_paths: "${{ env.WORK_DIR }}/run/*horizonqa.xml"
           annotate_only: true
+          job_summary: false
           detailed_summary: true
           include_passed: true
 
-      - name: Close HQA results block
+      - name: Write HQA test results to summary
         if: success() || failure()
+        env:
+          TABLE: ${{ steps.hqa-format.outputs.detailed_summary }}
+          JAVA: ${{ matrix.java-version }}
         run: |
           {
-            echo ''
-            echo '</details>'
+            printf '<details><summary><b>HQA test results (Java %s)</b></summary>\n' "$JAVA"
+            printf '%s\n' "$TABLE"
+            printf '</details>\n'
           } >> "$GITHUB_STEP_SUMMARY"
 
       - name: Final important summary append
