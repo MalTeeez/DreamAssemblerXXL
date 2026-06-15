@@ -49,8 +49,8 @@ else
 fi
 
 # Setup & run HQA tests
-rcon "setblock 1 -2 129 -2"
-rcon "teleport CI -2 131 -2"
+rcon "setblock -2 129 -2 1"
+rcon "tp CI -2 131 -2"
 rcon "horizonqa runall"
 
 crash_reports=("$CLIENT_MC_DIR/crash-reports/crash"*.txt)

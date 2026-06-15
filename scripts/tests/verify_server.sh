@@ -74,7 +74,7 @@ if [ -r "$SERVER_LOG" ]; then
     if [ -n "$dupes" ]; then
       fail "server had duplicate files, environment cant be guaranteed to contain correct versions:"
       echo "$dupes"
-    fi<
+    fi
   fi
 
   if grep --quiet --fixed-strings 'Exception stopping the server' "$SERVER_LOG"; then
