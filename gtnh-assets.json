@@ -14640,7 +14640,7 @@
     },
     {
       "name": "Angelica",
-      "latest_version": "2.1.37",
+      "latest_version": "2.1.38",
       "private": false,
       "versions": [
         {
@@ -16591,6 +16591,16 @@
           "filename": "angelica-2.1.37.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/Angelica/releases/assets/446921329",
           "browser_download_url": "https://github.com/GTNewHorizons/Angelica/releases/download/2.1.37/angelica-2.1.37.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "2.1.38",
+          "changelog": "## What's Changed\n* Rework DH matrix handling by @mitchej123 in https://github.com/GTNewHorizons/Angelica/pull/1861\n* Force invalidate dh depth tex when reconnecting DH Textures by @mitchej123 in https://github.com/GTNewHorizons/Angelica/pull/1862\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/Angelica/compare/2.1.37...2.1.38\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-14T22:02:02+00:00",
+          "filename": "angelica-2.1.38.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/Angelica/releases/assets/447592905",
+          "browser_download_url": "https://github.com/GTNewHorizons/Angelica/releases/download/2.1.38/angelica-2.1.38.jar",
           "extra_assets": []
         }
       ],
@@ -190351,6 +190361,6 @@
   ],
   "latest_experimental": 136,
   "latest_successful_experimental": 136,
-  "latest_daily": 1049,
-  "latest_successful_daily": 1049
+  "latest_daily": 1050,
+  "latest_successful_daily": 1050
 }
