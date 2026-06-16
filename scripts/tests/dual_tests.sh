@@ -21,7 +21,7 @@ RCON_PASSWORD="${RCON_PASSWORD:?RCON_PASSWORD must be set}"
 HQA_RESULT_JSON="$RUN_DIR/horizonqa-result.json"
 HQA_RESULT_TIMEOUT="${HQA_RESULT_TIMEOUT:-45}" # Has to be lower than -Dheadlessnh.gate.timeout passed to client
 
-RCON_RETRIES="${RCON_RETRIES:-3}"         # attempts per command before giving up
+RCON_RETRIES="${RCON_RETRIES:-10}"         # attempts per command before giving up
 
 # Run a single rcon command, retrying on failures
 rcon_try() {
@@ -31,9 +31,9 @@ rcon_try() {
       return 0
     fi
     echo "rcon attempt $attempt/$RCON_RETRIES failed: $*"
-    sleep "$RCON_RETRY_DELAY"
+    sleep 0.5
   done
-  return 0.1
+  return 1
 }
 
 # Send a command to the server via rcon, allows failures
