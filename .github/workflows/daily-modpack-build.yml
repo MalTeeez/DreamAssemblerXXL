@@ -194,7 +194,7 @@ jobs:
 
           - java-version: 8
             server-zip-variant: server-java8
-            client-zip-variant: mmcprism-java17-25
+            client-zip-variant: mmcprism-java8
             server-java-args: |
               -Xms1G -Xmx2500m
               -XX:+UseStringDeduplication -XX:+UseCompressedOops -XX:+UseCodeCacheFlushing
