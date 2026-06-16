@@ -1,8 +1,8 @@
 {
   "version": "daily",
   "last_version": "previous_daily",
-  "last_updated": "2026-06-14T23:52:24.294025",
-  "config": "2.9.0-nightly-2026-06-14",
+  "last_updated": "2026-06-16T02:58:56.575930",
+  "config": "2.9.0-nightly-2026-06-15",
   "github_mods": {
     "AdventureBackpack2": {
       "version": "1.4.21-GTNH",
@@ -25,7 +25,7 @@
       "side": "BOTH"
     },
     "Applied-Energistics-2-Unofficial": {
-      "version": "rv3-beta-982-GTNH",
+      "version": "rv3-beta-983-GTNH",
       "side": "BOTH"
     },
     "ArchitectureCraft": {
@@ -181,7 +181,7 @@
       "side": "BOTH"
     },
     "ForestryMC": {
-      "version": "4.11.26",
+      "version": "4.11.27",
       "side": "BOTH"
     },
     "Forgelin": {
@@ -209,7 +209,7 @@
       "side": "BOTH"
     },
     "GT5-Unofficial": {
-      "version": "5.09.52.608",
+      "version": "5.09.52.611",
       "side": "BOTH"
     },
     "GTNH-TC-Wands": {
@@ -221,7 +221,7 @@
       "side": "BOTH"
     },
     "Hardcore-Ender-Expansion": {
-      "version": "1.12.22-GTNH",
+      "version": "1.12.23-GTNH",
       "side": "BOTH"
     },
     "harvestcraft": {
@@ -333,7 +333,7 @@
       "side": "BOTH"
     },
     "NewHorizonsCoreMod": {
-      "version": "2.8.287",
+      "version": "2.8.288",
       "side": "BOTH"
     },
     "Nodal-Mechanics": {
@@ -513,7 +513,7 @@
       "side": "CLIENT"
     },
     "TinkersConstruct": {
-      "version": "1.14.92-GTNH",
+      "version": "1.14.93-GTNH",
       "side": "BOTH"
     },
     "TinkersMechworks": {
@@ -541,7 +541,7 @@
       "side": "BOTH"
     },
     "VisualProspecting": {
-      "version": "1.5.29",
+      "version": "1.5.30",
       "side": "BOTH"
     },
     "waila": {
@@ -837,7 +837,7 @@
       "side": "BOTH"
     },
     "JarJar": {
-      "version": "0.3.4-beta",
+      "version": "0.3.6-beta",
       "side": "BOTH"
     },
     "NoHotbarNeeded": {
