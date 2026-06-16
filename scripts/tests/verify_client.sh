@@ -13,7 +13,6 @@ CLIENT_MC_DIR="${CLIENT_MC_DIR:?CLIENT_MC_DIR must be set}"
 CLIENT_LOG="$RUN_DIR/client.log"
 CLIENT_EXIT_FLAG="$RUN_DIR/client.exit"
 CLIENT_KILLED_FLAG="$RUN_DIR/client.killed"
-DUAL_EXIT_FLAG="$RUN_DIR/dual.exit"
 DUAL_CLIENT_LOG="$RUN_DIR/dual_test_client.log"
 
 rc=0

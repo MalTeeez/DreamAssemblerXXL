@@ -54,12 +54,36 @@ stop_ffmpeg() {
   fi
 }
 
+# Echoes the id of the window with the provided game title.
+get_client_window() {
+  local w name
+  for w in $(xdotool search --name "" 2>/dev/null || true); do
+    name=$(xdotool getwindowname "$w" 2>/dev/null || true)
+    if [[ "$name" == *"$CLIENT_WINDOW_NAME"* ]]; then
+      echo "$w"
+      return 0
+    fi
+  done
+  return 1
+}
+
+# Polls for the client window up to $1 seconds, then focuses it.
+focus_client_window() {
+  local timeout="$1" wid end=$(( SECONDS + $1 ))
+  while (( SECONDS < end )); do
+    if wid=$(get_client_window); then
+      xdotool windowfocus "$wid" 2>/dev/null && return 0
+    fi
+    sleep 0.2
+  done
+  return 1
+}
+
 # Ask the window to close the way clicking the X would. Works with no window
 # manager present, which is why it is sent by hand. Needs python3-xlib.
 close_window_nicely() {
   local wid
-  wid=$(xdotool search --onlyvisible --name "$CLIENT_WINDOW_NAME" 2>/dev/null | head -1) || return 1
-  [ -n "$wid" ] || return 1
+  wid=$(get_client_window) || return 1
   python3 - "$wid" <<'PY' 2>/dev/null || return 1
 import sys
 from Xlib import X, display
@@ -126,12 +150,10 @@ echo "launched game (process group $GAME_PGID) -> $CLIENT_LOG"
 tail -n +1 -F "$CLIENT_LOG" 2>/dev/null &
 TAIL_PID=$!
 
-# focus window, --sync blocks until the window maps
-echo "XDOTOOL WINDOWS:" && xdotool search --name "" getwindowname %@
-if timeout ${CLIENT_FOCUS_TIMEOUT:-60} xdotool search --sync --onlyvisible --name "$CLIENT_WINDOW_NAME" windowfocus 2>/dev/null; then
+# focus window, block until the window maps or we timeout
+if focus_client_window "${CLIENT_FOCUS_TIMEOUT:-60}"; then
   echo "focused '$CLIENT_WINDOW_NAME' window"
 else
-  echo "XDOTOOL WINDOWS:" && xdotool search --name "" getwindowname %@
   echo "WARNING: no '$CLIENT_WINDOW_NAME' window to focus within ${CLIENT_FOCUS_TIMEOUT:-60}s"
 fi
 

@@ -19,7 +19,7 @@ SERVER_EXIT_FLAG="$RUN_DIR/server.exit"
 CLIENT_LOADED_FLAG="$RUN_DIR/.mainmenu.headlessnh"
 CLIENT_JOINED_FLAG="$RUN_DIR/.serverloaded.headlessnh"
 CLIENT_SINGLEP_FLAG="$RUN_DIR/.worldloaded.headlessnh"
-DUAL_EXIT_FLAG="$RUN_DIR/dual.exit"
+DUAL_EXIT_FLAG="$RUN_DIR/.dual.exit"
 CLIENT_GATE_SERVERLOADED="$RUN_DIR/serverloaded.gate"
 export SERVER_READY_FLAG SERVER_EXIT_FLAG CLIENT_LOADED_FLAG CLIENT_JOINED_FLAG CLIENT_SINGLEP_FLAG DUAL_EXIT_FLAG CLIENT_GATE_SERVERLOADED
 
@@ -36,7 +36,7 @@ watch_markers() {
   local -A seen=()
   local m name
   while :; do
-    for m in "$CLIENT_LOADED_FLAG" "$CLIENT_JOINED_FLAG" "$CLIENT_SINGLEP_FLAG"; do
+    for m in "$CLIENT_LOADED_FLAG" "$CLIENT_JOINED_FLAG" "$DUAL_EXIT_FLAG" "$CLIENT_SINGLEP_FLAG"; do
       if [ -e "$m" ] && [ -z "${seen[$m]:-}" ]; then
         seen[$m]=1
         name="$(basename "$m" | cut -d. -f2)"
@@ -65,6 +65,8 @@ run_dual_tests() {
   done
 
   bash "$SCRIPT_DIR/dual_tests.sh" > "$RUN_DIR/dual_test_executor.log" 2>&1 || true
+
+  sleep 2 # give time for screenshot
 
   : > "$CLIENT_GATE_SERVERLOADED"
   echo "dropped serverloaded gate -> $CLIENT_GATE_SERVERLOADED"

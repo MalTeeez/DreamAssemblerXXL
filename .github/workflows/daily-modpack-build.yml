@@ -229,7 +229,7 @@ jobs:
       - name: Install dependencies (for clientside)
         run: |
           sudo apt update
-          sudo apt install -y xvfb libgl1-mesa-dri xauth libegl1 libegl-mesa0 ffmpeg fonts-dejavu-core python3-xlib xdotool x11-xserver-utils scrot
+          sudo apt install -y xvfb libgl1-mesa-dri xauth libegl1 libegl-mesa0 ffmpeg fonts-dejavu-core python3-xlib xdotool x11-xserver-utils scrot x11-utils
 
       - name: Download build bundle
         uses: actions/download-artifact@v8
@@ -357,7 +357,7 @@ jobs:
               --title "Daily test screenshots" \
               --notes "Storage for the screenshots embedded in daily test run summaries. Not an actual release." || true
 
-          for marker in mainmenu serverloaded worldloaded; do
+          for marker in mainmenu serverloaded dual worldloaded; do
             src="$WORK_DIR/run/screenshot.$marker.png"
             [ -f "$src" ] || continue
             asset="java${{ matrix.java-version }}-$marker.png"
@@ -383,6 +383,7 @@ jobs:
         env:
           URL_mainmenu: ${{ steps.publish-media.outputs.url_mainmenu }}
           URL_serverloaded: ${{ steps.publish-media.outputs.url_serverloaded }}
+          URL_dual: ${{ steps.publish-media.outputs.url_dual }}
           URL_worldloaded: ${{ steps.publish-media.outputs.url_worldloaded }}
           VIDEO_RELEASE_URL: ${{ steps.publish-media.outputs.url_video }}
         run: |
@@ -402,6 +403,7 @@ jobs:
           done <<'EOF'
           mainmenu:Main menu
           serverloaded:Joined server
+          dual:HQA tests
           worldloaded:Joined singleplayer
           EOF
 

@@ -49,6 +49,7 @@ else
 fi
 
 # Setup & run HQA tests
+gamemode 1 CI
 rcon "setblock -2 134 -2 0"
 rcon "setblock -2 133 -2 0"
 rcon "setblock -2 132 -2 0"
