@@ -278,6 +278,7 @@ jobs:
           prism-bootstrap .
           --platform linux
           --headless
+          --meta-url https://meta.prismlauncher.org/v1/
           --xmx ${{ matrix.client-max-memory }}
           --jvm-arg "-Dheadlessnh.active=true"
           --jvm-arg "-Dheadlessnh.combined=true"
