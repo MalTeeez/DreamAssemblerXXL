@@ -75,6 +75,10 @@ fi
 
 # Setup & run HQA tests
 rcon_strict "gamemode 1 CI"
+rcon "tp CI -2 132 -2"
+
+sleep 10 # give it some time to generate
+
 rcon "setblock -2 134 -2 0"
 rcon "setblock -2 133 -2 0"
 rcon "setblock -2 132 -2 0"
@@ -82,8 +86,6 @@ rcon "setblock -2 131 -2 0"
 rcon "setblock -2 130 -2 0"
 rcon "setblock -2 129 -2 1"
 rcon "setblock -2 128 -2 1"
-
-sleep 5
 
 rcon "tp CI -2 132 -2"
 rcon "tp CI -2 132 -2"
