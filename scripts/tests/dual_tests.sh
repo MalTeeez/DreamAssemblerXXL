@@ -21,19 +21,36 @@ RCON_PASSWORD="${RCON_PASSWORD:?RCON_PASSWORD must be set}"
 HQA_RESULT_JSON="$RUN_DIR/horizonqa-result.json"
 HQA_RESULT_TIMEOUT="${HQA_RESULT_TIMEOUT:-45}" # Has to be lower than -Dheadlessnh.gate.timeout passed to client
 
+RCON_RETRIES="${RCON_RETRIES:-3}"         # attempts per command before giving up
+
+# Run a single rcon command, retrying on failures
+rcon_try() {
+  local attempt
+  for ((attempt = 1; attempt <= RCON_RETRIES; attempt++)); do
+    if rcon-cli --host "$RCON_HOST" --port "$RCON_PORT" --password "$RCON_PASSWORD" "$@"; then
+      return 0
+    fi
+    echo "rcon attempt $attempt/$RCON_RETRIES failed: $*"
+    sleep "$RCON_RETRY_DELAY"
+  done
+  return 0.1
+}
+
 # Send a command to the server via rcon, allows failures
 rcon() {
-  if ! rcon-cli --host "$RCON_HOST" --port "$RCON_PORT" --password "$RCON_PASSWORD" "$@"; then
+  if ! rcon_try "$@"; then
     echo "rcon command failed (ignored): $*"
   fi
+  sleep 0.1 # dont hammer the connection too much
 }
 
 # Same as above, but doesnt allow failures
 rcon_strict() {
-  if ! rcon-cli --host "$RCON_HOST" --port "$RCON_PORT" --password "$RCON_PASSWORD" "$@"; then
+  if ! rcon_try "$@"; then
     echo "rcon command failed: $*"
     rc=1
   fi
+  sleep 0.1
 }
 
 # Capture whatever each side emits for the length of this script (-n 0: new lines only)
