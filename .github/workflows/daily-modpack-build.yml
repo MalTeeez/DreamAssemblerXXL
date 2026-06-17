@@ -219,7 +219,7 @@ jobs:
       SERVER_START_TIMEOUT: ${{ matrix.server-startup-timeout }}
       SERVER_SETTLE_DURATION: ${{ matrix.server-settle-time }}
       RCON_PASSWORD: whoahaplaintextpassword
-      CLIENT_WINDOW_NAME: "GT New Horizons"
+      CLIENT_WINDOW_NAME: "GT: New Horizons"
       CLIENT_FOCUS_TIMEOUT: 180
 
     steps:
