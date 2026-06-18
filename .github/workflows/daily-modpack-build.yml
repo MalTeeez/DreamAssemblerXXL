@@ -245,6 +245,7 @@ jobs:
       - name: Unpack build artifacts
         run: |
           set -euo pipefail
+          mkdir -p ${{ env.WORK_DIR }}/run
           mkdir -p ${{ env.WORK_DIR }}/server
           unzip -q -o "GTNH-daily-${{ needs.build.outputs.today }}-${{ matrix.server-zip-variant }}.zip" -d ${{ env.WORK_DIR }}/server
           chmod -R u+rX ${{ env.WORK_DIR }}/server
