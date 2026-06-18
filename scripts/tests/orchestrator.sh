@@ -27,7 +27,6 @@ SERVER_STOP_TIMEOUT="${SERVER_STOP_TIMEOUT:-20}"
 DUAL_TEST_WAIT="${DUAL_TEST_WAIT:-360}"
 
 start_server() {
-  rm -rf "$RUN_DIR" && mkdir -p "$RUN_DIR"
   bash "$SCRIPT_DIR/server.sh" start
 }
 
