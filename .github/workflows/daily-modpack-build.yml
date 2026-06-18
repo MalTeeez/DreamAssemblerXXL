@@ -279,7 +279,7 @@ jobs:
           tar -xz --strip-components=1 -C /tmp/async-profiler -f async-profiler.tar.gz
           ln /tmp/async-profiler/bin/asprof /usr/local/bin/asprof
           curl -sSL -o flamegraph.pl https://raw.githubusercontent.com/brendangregg/FlameGraph/41fee1f99f9276008b7cd112fca19dc3ea84ac32/flamegraph.pl
-          mv flamegraph.pl ${{ env.WORK_DIR }}/
+          mv flamegraph.pl ${{ env.WORK_DIR }}/run/
 
       - name: Install prism-bootstrap
         shell: bash
@@ -418,32 +418,6 @@ jobs:
             fi
           fi
 
-      - name: Prune media older than 90 days
-        # Gated to a single matrix leg so the two parallel jobs don't race on the same deletes.
-        if: (success() || failure()) && matrix.java-version == 8
-        shell: bash
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          TAG: daily-screenshots
-          RETENTION_DAYS: 90
-        run: |
-          set -uo pipefail
-          cutoff=$(date -d '$RETENTION_DAYS days ago' +%Y-%m-%d)
-          echo "Pruning $TAG assets dated before $cutoff"
-          gh release view "$TAG" -R "$GITHUB_REPOSITORY" --json assets --jq '.assets[].name' | \
-          while read -r name; do
-            # Asset names should start with the ISO date they were produced (YYYY-MM-DD)
-            asset_date="${name:0:10}"
-            case "$asset_date" in
-              [0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]) ;;
-              *) continue ;;
-            esac
-            if [[ "$asset_date" < "$cutoff" ]]; then
-              echo "Deleting $name (dated $asset_date) since its older than $RETENTION_DAYS"
-              gh release delete-asset "$TAG" "$name" -R "$GITHUB_REPOSITORY" --yes || true
-            fi
-          done
-
       - name: Upload test job summary
         shell: bash
         if: success() || failure()
@@ -520,6 +494,38 @@ jobs:
         if: success()
         run: |
           echo "# :shipit:" >> "$GITHUB_STEP_SUMMARY"
+
+
+  prune-old-media:
+    needs: test
+    if: always()
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write # delete old release assets
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      TAG: daily-screenshots
+      RETENTION_DAYS: 90
+    steps:
+      - name: Prune media older than retention window
+        shell: bash
+        run: |
+          set -uo pipefail
+          cutoff=$(date -d "$RETENTION_DAYS days ago" +%Y-%m-%d)
+          echo "Pruning $TAG assets dated before $cutoff"
+          gh release view "$TAG" -R "$GITHUB_REPOSITORY" --json assets --jq '.assets[].name' | \
+          while read -r name; do
+            # Asset names should start with the ISO date they were produced (YYYY-MM-DD)
+            asset_date="${name:0:10}"
+            case "$asset_date" in
+              [0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]) ;;
+              *) continue ;;
+            esac
+            if [[ "$asset_date" < "$cutoff" ]]; then
+              echo "Deleting $name (dated $asset_date) since it's older than $RETENTION_DAYS days"
+              gh release delete-asset "$TAG" "$name" -R "$GITHUB_REPOSITORY" --yes || true
+            fi
+          done
 
 
   upload:
