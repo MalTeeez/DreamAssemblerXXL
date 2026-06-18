@@ -278,8 +278,8 @@ jobs:
           tar -xz --strip-components=1 -C /tmp/async-profiler -f async-profiler.tar.gz
           ln /tmp/async-profiler/bin/asprof /usr/local/bin/asprof
           curl -sSL -o flamegraph.pl https://raw.githubusercontent.com/brendangregg/FlameGraph/41fee1f99f9276008b7cd112fca19dc3ea84ac32/flamegraph.pl
-          mv flamegraph.pl ${{ env.WORK_DIR }}/run/
           chmod +x flamegraph.pl
+          mv flamegraph.pl ${{ env.WORK_DIR }}/run/
 
       - name: Install prism-bootstrap
         shell: bash
