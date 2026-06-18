@@ -196,7 +196,7 @@ jobs:
             server-settle-time: 45
             client-join-settle-time: 5000
             client-max-memory: 3400m
-            
+
           - java-version: 8
             server-zip-variant: server-java8
             client-zip-variant: mmcprism-java8
@@ -268,6 +268,18 @@ jobs:
           echo "587f771ae5d4424eb6c15cdf76634049cb29c3ff2b2020500fe26c64c66aab62  rcon-cli.tar.gz" | sha256sum -c -
           tar -xz -C /usr/local/bin -f rcon-cli.tar.gz rcon-cli
           rm rcon-cli.tar.gz
+
+      - name: Install async-profiler & flamegraph
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -sSL -o async-profiler.tar.gz https://github.com/async-profiler/async-profiler/releases/download/v4.4/async-profiler-4.4-linux-x64.tar.gz
+          echo "1233f26fc95753e75ce32733bbcaf8f0bedc2c098b0e798af87935b08a63b24e  async-profiler.tar.gz" | sha256sum -c -
+          mkdir -p /tmp/async-profiler
+          tar -xz --strip-components=1 -C /tmp/async-profiler -f async-profiler.tar.gz
+          ln /tmp/async-profiler/bin/asprof /usr/local/bin/asprof
+          curl -sSL -o flamegraph.pl https://raw.githubusercontent.com/brendangregg/FlameGraph/41fee1f99f9276008b7cd112fca19dc3ea84ac32/flamegraph.pl
+          mv flamegraph.pl ${{ env.WORK_DIR }}/
 
       - name: Install prism-bootstrap
         shell: bash
@@ -347,27 +359,39 @@ jobs:
         if: success() || failure()
         run: bash scripts/tests/orchestrator.sh verify-client
 
+
+      - name: Create flamegraph
+        if: success() || failure()
+        working-directory: ${{ env.WORK_DIR }}/run
+        run: |
+          set -euo pipefail
+          ./flamegraph.pl --color=java --width=1920 client_profile.collapsed > client_profile.svg
+
       # GH markdown seems to only embed media from CSP-allowlisted domains, which does not include artifacts.
-      # Release asset URLs redirect to release-assets.githubusercontent.com (which is allowed), 
-      # so we use a rolling prerelease as the media host for the summary embeds.
-      - name: Publish screenshots to rolling release
+      # Release asset URLs redirect to release-assets.githubusercontent.com (which is allowed),
+      # so we use a rolling prerelease as the media host for the summary embeds. Assets are keyed by
+      # date and run number so every run is preserved; the prune step below rolls assets with a 90-day retention.
+      - name: Publish media to rolling asset store
         id: publish-media
         if: success() || failure()
         shell: bash
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TAG: daily-screenshots
+          TODAY: ${{ needs.build.outputs.today }}
         run: |
           set -uo pipefail
           gh release view "$TAG" -R "$GITHUB_REPOSITORY" >/dev/null 2>&1 || \
             gh release create "$TAG" -R "$GITHUB_REPOSITORY" --prerelease \
-              --title "Daily test screenshots" \
-              --notes "Storage for the screenshots embedded in daily test run summaries. Not an actual release." || true
+              --title "Daily test media (90-day rolling store)" \
+              --notes "**This is not an actual release.** This is the asset storage for modpack builds." || true
+
+          prefix="${TODAY/+/-daily-}-java${{ matrix.java-version }}"
 
           for marker in mainmenu serverloaded dual worldloaded; do
             src="$WORK_DIR/run/screenshot.$marker.png"
             [ -f "$src" ] || continue
-            asset="java${{ matrix.java-version }}-$marker.png"
+            asset="${prefix}-$marker.png"
             cp "$src" "/tmp/$asset"
             if gh release upload "$TAG" "/tmp/$asset" -R "$GITHUB_REPOSITORY" --clobber; then
               echo "url_$marker=https://github.com/$GITHUB_REPOSITORY/releases/download/$TAG/$asset" >> "$GITHUB_OUTPUT"
@@ -376,12 +400,49 @@ jobs:
 
           video="$WORK_DIR/run/client.mp4"
           if [ -f "$video" ]; then
-            asset="java${{ matrix.java-version }}-client.mp4"
+            asset="${prefix}-client.mp4"
             cp "$video" "/tmp/$asset"
             if gh release upload "$TAG" "/tmp/$asset" -R "$GITHUB_REPOSITORY" --clobber; then
-              echo "url_video=https://github.com/$GITHUB_REPOSITORY/releases/download/$TAG/$asset" >> "$GITHUB_OUTPUT"
+              # Use a proxy so we can get the correct content type
+              echo "url_video=https://githubproxy.samuelcolvin.workers.dev/$GITHUB_REPOSITORY/releases/download/$TAG/$asset" >> "$GITHUB_OUTPUT"
             fi
           fi
+
+          flamegraph="$WORK_DIR/run/client_profile.svg"
+          if [ -f "$flamegraph" ]; then
+            asset="${prefix}-flamegraph.svg"
+            cp "$flamegraph" "/tmp/$asset"
+            if gh release upload "$TAG" "/tmp/$asset" -R "$GITHUB_REPOSITORY" --clobber; then
+              # Use a proxy so we can get the correct content type
+              echo "url_flamegraph=https://githubproxy.samuelcolvin.workers.dev/$GITHUB_REPOSITORY/releases/download/$TAG/$asset" >> "$GITHUB_OUTPUT"
+            fi
+          fi
+
+      - name: Prune media older than 90 days
+        # Gated to a single matrix leg so the two parallel jobs don't race on the same deletes.
+        if: (success() || failure()) && matrix.java-version == 8
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: daily-screenshots
+          RETENTION_DAYS: 90
+        run: |
+          set -uo pipefail
+          cutoff=$(date -d '$RETENTION_DAYS days ago' +%Y-%m-%d)
+          echo "Pruning $TAG assets dated before $cutoff"
+          gh release view "$TAG" -R "$GITHUB_REPOSITORY" --json assets --jq '.assets[].name' | \
+          while read -r name; do
+            # Asset names should start with the ISO date they were produced (YYYY-MM-DD)
+            asset_date="${name:0:10}"
+            case "$asset_date" in
+              [0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]) ;;
+              *) continue ;;
+            esac
+            if [[ "$asset_date" < "$cutoff" ]]; then
+              echo "Deleting $name (dated $asset_date) since its older than $RETENTION_DAYS"
+              gh release delete-asset "$TAG" "$name" -R "$GITHUB_REPOSITORY" --yes || true
+            fi
+          done
 
       - name: Upload test job summary
         shell: bash
@@ -393,6 +454,7 @@ jobs:
           URL_dual: ${{ steps.publish-media.outputs.url_dual }}
           URL_worldloaded: ${{ steps.publish-media.outputs.url_worldloaded }}
           VIDEO_RELEASE_URL: ${{ steps.publish-media.outputs.url_video }}
+          FLAMEGRAPH_RELEASE_URL: ${{ steps.publish-media.outputs.url_flamegraph }}
         run: |
           echo "<details open><summary><b>Client test results (Java ${{ matrix.java-version }})</b></summary>" >> "$GITHUB_STEP_SUMMARY"
           echo "" >> "$GITHUB_STEP_SUMMARY"
@@ -402,11 +464,17 @@ jobs:
           while IFS=: read -r marker label; do
             url_var="URL_$marker"
             url="${!url_var}"
+            cell=""
             if [ -n "$url" ]; then
-              echo "| $label | ![screenshot]($url) |" >> "$GITHUB_STEP_SUMMARY"
+              cell="![screenshot]($url)"
             else
-              echo "| $label | :x: |" >> "$GITHUB_STEP_SUMMARY"
+              cell=":x:"
             fi
+            # Show the flamegraph side by side with the main menu screenshot.
+            if [ "$marker" = "mainmenu" ] && [ -n "$FLAMEGRAPH_RELEASE_URL" ]; then
+              cell="$cell [![flamegraph]($FLAMEGRAPH_RELEASE_URL)]($FLAMEGRAPH_RELEASE_URL)"
+            fi
+            echo "| $label | $cell |" >> "$GITHUB_STEP_SUMMARY"
           done <<'EOF'
           mainmenu:Main menu
           serverloaded:Joined server
