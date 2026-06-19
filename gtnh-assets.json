@@ -31406,7 +31406,7 @@
     },
     {
       "name": "BetterQuesting",
-      "latest_version": "3.8.71-GTNH",
+      "latest_version": "3.8.72-GTNH",
       "private": false,
       "versions": [
         {
@@ -33358,6 +33358,16 @@
           "filename": "BetterQuesting-3.8.71-GTNH.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/BetterQuesting/releases/assets/441832763",
           "browser_download_url": "https://github.com/GTNewHorizons/BetterQuesting/releases/download/3.8.71-GTNH/BetterQuesting-3.8.71-GTNH.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "3.8.72-GTNH",
+          "changelog": "## What's Changed\n* Add ColorUtils by @Ranzuu in https://github.com/GTNewHorizons/BetterQuesting/pull/235\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/BetterQuesting/compare/3.8.71-GTNH...3.8.72-GTNH\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-19T20:21:09+00:00",
+          "filename": "BetterQuesting-3.8.72-GTNH.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/BetterQuesting/releases/assets/452459871",
+          "browser_download_url": "https://github.com/GTNewHorizons/BetterQuesting/releases/download/3.8.72-GTNH/BetterQuesting-3.8.72-GTNH.jar",
           "extra_assets": []
         }
       ],
@@ -44421,7 +44431,7 @@
     },
     {
       "name": "CropsNH",
-      "latest_version": "2.0.77",
+      "latest_version": "2.0.78",
       "private": false,
       "versions": [
         {
@@ -45202,6 +45212,16 @@
           "filename": "cropsnh-2.0.77.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/CropsNH/releases/assets/449883733",
           "browser_download_url": "https://github.com/GTNewHorizons/CropsNH/releases/download/2.0.77/cropsnh-2.0.77.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "2.0.78",
+          "changelog": "## What's Changed\n* IF: Fix auto-place and make input bus optional by @C0bra5 in https://github.com/GTNewHorizons/CropsNH/pull/171\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/CropsNH/compare/2.0.77...2.0.78\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-19T20:28:57+00:00",
+          "filename": "cropsnh-2.0.78.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/CropsNH/releases/assets/452464878",
+          "browser_download_url": "https://github.com/GTNewHorizons/CropsNH/releases/download/2.0.78/cropsnh-2.0.78.jar",
           "extra_assets": []
         }
       ],
@@ -54230,7 +54250,7 @@
     },
     {
       "name": "ForestryMC",
-      "latest_version": "4.11.27",
+      "latest_version": "4.11.28",
       "private": false,
       "versions": [
         {
@@ -55513,6 +55533,16 @@
           "filename": "Forestry-4.11.27.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/ForestryMC/releases/assets/447854724",
           "browser_download_url": "https://github.com/GTNewHorizons/ForestryMC/releases/download/4.11.27/Forestry-4.11.27.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "4.11.28",
+          "changelog": "## What's Changed\n* Add NEI overlays for the carpenter and fabricator by @tiffit in https://github.com/GTNewHorizons/ForestryMC/pull/123\n\n## New Contributors\n* @tiffit made their first contribution in https://github.com/GTNewHorizons/ForestryMC/pull/123\n\n**Full Changelog**: https://github.com/GTNewHorizons/ForestryMC/compare/4.11.27...4.11.28\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-19T20:01:18+00:00",
+          "filename": "Forestry-4.11.28.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/ForestryMC/releases/assets/452448286",
+          "browser_download_url": "https://github.com/GTNewHorizons/ForestryMC/releases/download/4.11.28/Forestry-4.11.28.jar",
           "extra_assets": []
         }
       ],
@@ -62174,7 +62204,7 @@
     },
     {
       "name": "GT5-Unofficial",
-      "latest_version": "5.09.52.617",
+      "latest_version": "5.09.52.618",
       "private": false,
       "versions": [
         {
@@ -86956,6 +86986,16 @@
           "download_url": "https://api.github.com/repos/GTNewHorizons/GT5-Unofficial/releases/assets/452418586",
           "browser_download_url": "https://github.com/GTNewHorizons/GT5-Unofficial/releases/download/5.09.52.617/gregtech-5.09.52.617.jar",
           "extra_assets": []
+        },
+        {
+          "version_tag": "5.09.52.618",
+          "changelog": "## What's Changed\n* Fix input blocking by @AnsonYeung in https://github.com/GTNewHorizons/GT5-Unofficial/pull/7206\n* Defer getInfoData() translation to client in gtplusplus by @Eldrinn-Elantey in https://github.com/GTNewHorizons/GT5-Unofficial/pull/7107\n* Defer getInfoData() translation to client in tectech by @Eldrinn-Elantey in https://github.com/GTNewHorizons/GT5-Unofficial/pull/7113\n* Defer getInfoData() translation to client in kubatech by @Eldrinn-Elantey in https://github.com/GTNewHorizons/GT5-Unofficial/pull/7112\n* fix some multis hints by @Yoshy2002 in https://github.com/GTNewHorizons/GT5-Unofficial/pull/7205\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/GT5-Unofficial/compare/5.09.52.617...5.09.52.618\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-19T20:16:14+00:00",
+          "filename": "gregtech-5.09.52.618.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/GT5-Unofficial/releases/assets/452456755",
+          "browser_download_url": "https://github.com/GTNewHorizons/GT5-Unofficial/releases/download/5.09.52.618/gregtech-5.09.52.618.jar",
+          "extra_assets": []
         }
       ],
       "license": "GNU Lesser General Public License v3.0",
@@ -98322,7 +98362,7 @@
     },
     {
       "name": "Hodgepodge",
-      "latest_version": "2.7.162",
+      "latest_version": "2.7.163",
       "private": false,
       "versions": [
         {
@@ -104093,6 +104133,16 @@
           "filename": "hodgepodge-2.7.162.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/Hodgepodge/releases/assets/445801577",
           "browser_download_url": "https://github.com/GTNewHorizons/Hodgepodge/releases/download/2.7.162/hodgepodge-2.7.162.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "2.7.163",
+          "changelog": "## What's Changed\n* Include TextureAtlasSprite info in DumpTextureAtlasCommand by @tiffit in https://github.com/GTNewHorizons/Hodgepodge/pull/925\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/Hodgepodge/compare/2.7.162...2.7.163\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-19T20:32:46+00:00",
+          "filename": "hodgepodge-2.7.163.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/Hodgepodge/releases/assets/452467072",
+          "browser_download_url": "https://github.com/GTNewHorizons/Hodgepodge/releases/download/2.7.163/hodgepodge-2.7.163.jar",
           "extra_assets": []
         }
       ],
@@ -117993,7 +118043,7 @@
     },
     {
       "name": "MatterManipulator",
-      "latest_version": "0.1.42-GTNH",
+      "latest_version": "0.1.43-GTNH",
       "private": false,
       "versions": [
         {
@@ -118825,6 +118875,16 @@
           "filename": "matter-manipulator-0.1.42-GTNH.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/MatterManipulator/releases/assets/449742075",
           "browser_download_url": "https://github.com/GTNewHorizons/MatterManipulator/releases/download/0.1.42-GTNH/matter-manipulator-0.1.42-GTNH.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "0.1.43-GTNH",
+          "changelog": "## What's Changed\n* Use new isGTRenderer method by @RecursivePineapple in https://github.com/GTNewHorizons/MatterManipulator/pull/62\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/MatterManipulator/compare/0.1.42-GTNH...0.1.43-GTNH\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-19T20:25:21+00:00",
+          "filename": "matter-manipulator-0.1.43-GTNH.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/MatterManipulator/releases/assets/452462506",
+          "browser_download_url": "https://github.com/GTNewHorizons/MatterManipulator/releases/download/0.1.43-GTNH/matter-manipulator-0.1.43-GTNH.jar",
           "extra_assets": []
         }
       ],
@@ -191081,6 +191141,6 @@
   ],
   "latest_experimental": 136,
   "latest_successful_experimental": 136,
-  "latest_daily": 1083,
-  "latest_successful_daily": 1083
+  "latest_daily": 1084,
+  "latest_successful_daily": 1084
 }
