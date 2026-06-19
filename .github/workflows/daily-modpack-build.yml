@@ -367,7 +367,19 @@ jobs:
         continue-on-error: true
         run: |
           set -euo pipefail
-          ./flamegraph.pl --color=java --width=1920 client_profile.collapsed > client_profile.svg
+          # Low-detail preview svg (small file); full detail lives in the linked html.
+          ./flamegraph.pl --color=java --width=840 --minwidth=1 client_profile.collapsed > client_profile.svg
+          # Scale the summary <img> to fit within 840x480 preserving aspect ratio
+          # (GitHub strips css, so we set width/height attributes computed from the svg).
+          w=$(sed -nE 's/.*<svg[^>]* width="([0-9.]+)".*/\1/p' client_profile.svg | head -1)
+          h=$(sed -nE 's/.*<svg[^>]* height="([0-9.]+)".*/\1/p' client_profile.svg | head -1)
+          if [ -n "$w" ] && [ -n "$h" ]; then
+            dims=$(awk -v w="$w" -v h="$h" 'BEGIN{s=840/w; if(480/h<s)s=480/h; if(s>1)s=1; printf "%d %d", w*s, h*s}')
+            echo "FLAMEGRAPH_W=${dims% *}" >> "$GITHUB_ENV"
+            echo "FLAMEGRAPH_H=${dims#* }" >> "$GITHUB_ENV"
+          fi
+          # Full-detail html with (also has more features, that ARENT laggy)
+          /tmp/async-profiler/bin/jfrconv -o html --title "GTNH daily startup (Java ${{ matrix.java-version }})" client_profile.collapsed client_profile.html
 
       # GH markdown seems to only embed media from CSP-allowlisted domains, which does not include artifacts.
       # Release asset URLs redirect to release-assets.githubusercontent.com (which is allowed),
@@ -420,6 +432,16 @@ jobs:
             fi
           fi
 
+          flamegraph_html="$WORK_DIR/run/client_profile.html"
+          if [ -f "$flamegraph_html" ]; then
+            asset="${prefix}-flamegraph.html"
+            cp "$flamegraph_html" "/tmp/$asset"
+            if gh release upload "$TAG" "/tmp/$asset" -R "$GITHUB_REPOSITORY" --clobber; then
+              # Use a proxy so the interactive flamegraph is served as text/html and renders in the browser
+              echo "url_flamegraph_html=https://githubproxy.samuelcolvin.workers.dev/$GITHUB_REPOSITORY/releases/download/$TAG/$asset" >> "$GITHUB_OUTPUT"
+            fi
+          fi
+
       - name: Upload test job summary
         shell: bash
         if: success() || failure()
@@ -431,6 +453,7 @@ jobs:
           URL_worldloaded: ${{ steps.publish-media.outputs.url_worldloaded }}
           VIDEO_RELEASE_URL: ${{ steps.publish-media.outputs.url_video }}
           FLAMEGRAPH_RELEASE_URL: ${{ steps.publish-media.outputs.url_flamegraph }}
+          FLAMEGRAPH_HTML_URL: ${{ steps.publish-media.outputs.url_flamegraph_html }}
         run: |
           echo "<details open><summary><b>Client test results (Java ${{ matrix.java-version }})</b></summary>" >> "$GITHUB_STEP_SUMMARY"
           echo "" >> "$GITHUB_STEP_SUMMARY"
@@ -446,9 +469,11 @@ jobs:
             else
               cell=":x:"
             fi
-            # Show the flamegraph side by side with the main menu screenshot.
+            # Show the flamegraph svg side by side with the main menu screenshot,
+            # linking to the interactive html version (and falling back to the svg).
             if [ "$marker" = "mainmenu" ] && [ -n "$FLAMEGRAPH_RELEASE_URL" ]; then
-              cell="$cell [![flamegraph]($FLAMEGRAPH_RELEASE_URL)]($FLAMEGRAPH_RELEASE_URL)"
+              href="${FLAMEGRAPH_HTML_URL:-$FLAMEGRAPH_RELEASE_URL}"
+              cell="$cell <a href=\"$href\"><img src=\"$FLAMEGRAPH_RELEASE_URL\" alt=\"flamegraph\" width=\"${FLAMEGRAPH_W:-840}\" height=\"${FLAMEGRAPH_H:-480}\"></a>"
             fi
             echo "| $label | $cell |" >> "$GITHUB_STEP_SUMMARY"
           done <<'EOF'

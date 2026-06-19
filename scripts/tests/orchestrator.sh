@@ -54,7 +54,7 @@ watch_markers_for_startup() {
   local m name
   while :; do
       if [ -e "$CLIENT_LOADED_FLAG" ] && [ -e "$RUN_DIR/client.pid" ]; then
-        # asprof stop -o collapsed -f "$RUN_DIR/client_profile.collapsed" $(cat "$RUN_DIR/client.pid") || true
+        asprof stop -o collapsed -f "$RUN_DIR/client_profile.collapsed" $(cat "$RUN_DIR/client.pid") || true
         break
       fi
     sleep 0.5

@@ -162,7 +162,6 @@ echo "launched game (process group $GAME_PGID, java pid ${JAVA_PID:-none}) -> $C
 
 # start profiling the underlying java process
 if [ -n "$JAVA_PID" ]; then
-  # asprof start -e ctimer "$JAVA_PID"
   echo "$JAVA_PID" > "$RUN_DIR/client.pid"
 else
   echo "Failed to find java process in group $GAME_PGID, skipping profiling"
