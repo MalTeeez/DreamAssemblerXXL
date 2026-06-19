@@ -276,7 +276,7 @@ jobs:
           echo "1233f26fc95753e75ce32733bbcaf8f0bedc2c098b0e798af87935b08a63b24e  async-profiler.tar.gz" | sha256sum -c -
           mkdir -p /tmp/async-profiler
           tar -xz --strip-components=1 -C /tmp/async-profiler -f async-profiler.tar.gz
-          ln /tmp/async-profiler/bin/asprof /usr/local/bin/asprof
+          ln -s /tmp/async-profiler/bin/asprof /usr/local/bin/asprof
           curl -sSL -o flamegraph.pl https://raw.githubusercontent.com/brendangregg/FlameGraph/41fee1f99f9276008b7cd112fca19dc3ea84ac32/flamegraph.pl
           chmod +x flamegraph.pl
           mv flamegraph.pl ${{ env.WORK_DIR }}/run/
@@ -363,6 +363,7 @@ jobs:
       - name: Create flamegraph
         if: success() || failure()
         working-directory: ${{ env.WORK_DIR }}/run
+        continue-on-error: true
         run: |
           set -euo pipefail
           ./flamegraph.pl --color=java --width=1920 client_profile.collapsed > client_profile.svg
