@@ -100,7 +100,7 @@ PY
 }
 
 cleanup() {
-  [ -n "$JAVA_PID" ] && asprof stop -o collapsed -f "$RUN_DIR/client_profile.collapsed" "$JAVA_PID" 2>/dev/null
+  # [ -n "$JAVA_PID" ] && asprof stop -o collapsed -f "$RUN_DIR/client_profile.collapsed" "$JAVA_PID" 2>/dev/null
   [ -n "$GAME_PGID" ] && kill -TERM -- "-$GAME_PGID" 2>/dev/null
   stop_ffmpeg
   [ -n "$XVFB_PID" ] && kill -TERM "$XVFB_PID" 2>/dev/null
@@ -162,7 +162,7 @@ echo "launched game (process group $GAME_PGID, java pid ${JAVA_PID:-none}) -> $C
 
 # start profiling the underlying java process
 if [ -n "$JAVA_PID" ]; then
-  asprof start -e ctimer "$JAVA_PID"
+  # asprof start -e ctimer "$JAVA_PID"
   echo "$JAVA_PID" > "$RUN_DIR/client.pid"
 else
   echo "Failed to find java process in group $GAME_PGID, skipping profiling"

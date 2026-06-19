@@ -298,6 +298,7 @@ jobs:
           --headless
           --meta-url https://meta.prismlauncher.org/v1/
           --xmx ${{ matrix.client-max-memory }}
+          --jvm-arg "-agentpath:/tmp/async-profiler/lib/libasyncProfiler.so=start,event=ctimer,collapsed,file=${{ env.WORK_DIR }}/run/client_profile.collapsed"
           --jvm-arg "-Dheadlessnh.active=true"
           --jvm-arg "-Dheadlessnh.combined=true"
           --jvm-arg "-Dheadlessnh.markerdir=${{ env.WORK_DIR }}/run"
@@ -345,11 +346,11 @@ jobs:
         if: success() || failure()
         run: |
          echo "--- Logs from dual test : executor ---"
-         cat ${{ env.WORK_DIR }}/run/dual_test_executor.log
+         cat ${{ env.WORK_DIR }}/run/dual_test_executor.log || true
          echo "--- Logs from dual test : client ---"
-         cat ${{ env.WORK_DIR }}/run/dual_test_client.log
+         cat ${{ env.WORK_DIR }}/run/dual_test_client.log || true
          echo "--- Logs from dual test : server ---"
-         cat ${{ env.WORK_DIR }}/run/dual_test_server.log
+         cat ${{ env.WORK_DIR }}/run/dual_test_server.log || true
 
       - name: Verify server
         if: success() || failure()
