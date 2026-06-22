@@ -1,7 +1,7 @@
 {
   "config": {
     "name": "GT-New-Horizons-Modpack",
-    "latest_version": "2.9.0-nightly-2026-06-22",
+    "latest_version": "2.9.0-nightly-2026-06-22-2",
     "needs_attention": false,
     "versions": [
       {
@@ -7122,6 +7122,16 @@
         "filename": "2.9.0-nightly-2026-06-22.zip",
         "download_url": "https://api.github.com/repos/GTNewHorizons/GT-New-Horizons-Modpack/releases/assets/454225292",
         "browser_download_url": "https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/releases/download/2.9.0-nightly-2026-06-22/2.9.0-nightly-2026-06-22.zip",
+        "extra_assets": []
+      },
+      {
+        "version_tag": "2.9.0-nightly-2026-06-22-2",
+        "changelog": "",
+        "prerelease": false,
+        "tagged_at": "2026-06-22T21:40:52+00:00",
+        "filename": "2.9.0-nightly-2026-06-22-2.zip",
+        "download_url": "https://api.github.com/repos/GTNewHorizons/GT-New-Horizons-Modpack/releases/assets/454984462",
+        "browser_download_url": "https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/releases/download/2.9.0-nightly-2026-06-22-2/2.9.0-nightly-2026-06-22-2.zip",
         "extra_assets": []
       }
     ],
@@ -191551,6 +191561,6 @@
   ],
   "latest_experimental": 136,
   "latest_successful_experimental": 136,
-  "latest_daily": 1087,
-  "latest_successful_daily": 1087
+  "latest_daily": 1088,
+  "latest_successful_daily": 1088
 }
