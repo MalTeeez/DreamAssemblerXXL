@@ -47525,7 +47525,7 @@
     },
     {
       "name": "Electro-Magic-Tools",
-      "latest_version": "1.7.23",
+      "latest_version": "1.7.24",
       "private": false,
       "versions": [
         {
@@ -48627,6 +48627,16 @@
           "filename": "EMT-1.7.23.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/Electro-Magic-Tools/releases/assets/454224909",
           "browser_download_url": "https://github.com/GTNewHorizons/Electro-Magic-Tools/releases/download/1.7.23/EMT-1.7.23.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "1.7.24",
+          "changelog": "## What's Changed\n* deprecate ic2 bounce pad by @LazyFlesh in https://github.com/GTNewHorizons/Electro-Magic-Tools/pull/121\n* Deprecate ic2 glass by @LazyFlesh in https://github.com/GTNewHorizons/Electro-Magic-Tools/pull/118\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/Electro-Magic-Tools/compare/1.7.23...1.7.24\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-22T21:37:49+00:00",
+          "filename": "EMT-1.7.24.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/Electro-Magic-Tools/releases/assets/454982611",
+          "browser_download_url": "https://github.com/GTNewHorizons/Electro-Magic-Tools/releases/download/1.7.24/EMT-1.7.24.jar",
           "extra_assets": []
         }
       ],
@@ -126546,7 +126556,7 @@
     },
     {
       "name": "NewHorizonsCoreMod",
-      "latest_version": "2.8.294",
+      "latest_version": "2.8.296",
       "private": false,
       "versions": [
         {
@@ -137867,6 +137877,26 @@
           "filename": "GTNewHorizonsCoreMod-2.8.294.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/NewHorizonsCoreMod/releases/assets/454225380",
           "browser_download_url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/releases/download/2.8.294/GTNewHorizonsCoreMod-2.8.294.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "2.8.295",
+          "changelog": "## What's Changed\n* Fix missing coremod cutting recipes in nei by @TotallyNotOndre in https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/1827\n* replace ic2 to gt reinforced stone by @LazyFlesh in https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/1824\n* deprecate ic2 glass recipes by @LazyFlesh in https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/1818\n* replace ic2 rubber pad for gt, add recipe for sticky pad by @LazyFlesh in https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/1822\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/NewHorizonsCoreMod/compare/2.8.294...2.8.295\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-22T21:11:35+00:00",
+          "filename": "GTNewHorizonsCoreMod-2.8.295.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/NewHorizonsCoreMod/releases/assets/454960670",
+          "browser_download_url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/releases/download/2.8.295/GTNewHorizonsCoreMod-2.8.295.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "2.8.296",
+          "changelog": "## What's Changed\n* reupdate rolled back deps  by @LazyFlesh in https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/1828\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/NewHorizonsCoreMod/compare/2.8.295...2.8.296\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-22T21:27:37+00:00",
+          "filename": "GTNewHorizonsCoreMod-2.8.296.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/NewHorizonsCoreMod/releases/assets/454974482",
+          "browser_download_url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/releases/download/2.8.296/GTNewHorizonsCoreMod-2.8.296.jar",
           "extra_assets": []
         }
       ],
@@ -137876,7 +137906,7 @@
     },
     {
       "name": "NewHorizonsCoreMod",
-      "latest_version": "2.8.294",
+      "latest_version": "2.8.296",
       "private": false,
       "versions": [
         {
@@ -149197,6 +149227,26 @@
           "filename": "GTNewHorizonsCoreMod-2.8.294.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/NewHorizonsCoreMod/releases/assets/454225380",
           "browser_download_url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/releases/download/2.8.294/GTNewHorizonsCoreMod-2.8.294.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "2.8.295",
+          "changelog": "## What's Changed\n* Fix missing coremod cutting recipes in nei by @TotallyNotOndre in https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/1827\n* replace ic2 to gt reinforced stone by @LazyFlesh in https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/1824\n* deprecate ic2 glass recipes by @LazyFlesh in https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/1818\n* replace ic2 rubber pad for gt, add recipe for sticky pad by @LazyFlesh in https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/1822\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/NewHorizonsCoreMod/compare/2.8.294...2.8.295\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-22T21:11:35+00:00",
+          "filename": "GTNewHorizonsCoreMod-2.8.295.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/NewHorizonsCoreMod/releases/assets/454960670",
+          "browser_download_url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/releases/download/2.8.295/GTNewHorizonsCoreMod-2.8.295.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "2.8.296",
+          "changelog": "## What's Changed\n* reupdate rolled back deps  by @LazyFlesh in https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/1828\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/NewHorizonsCoreMod/compare/2.8.295...2.8.296\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-22T21:27:37+00:00",
+          "filename": "GTNewHorizonsCoreMod-2.8.296.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/NewHorizonsCoreMod/releases/assets/454974482",
+          "browser_download_url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/releases/download/2.8.296/GTNewHorizonsCoreMod-2.8.296.jar",
           "extra_assets": []
         }
       ],
@@ -191501,6 +191551,6 @@
   ],
   "latest_experimental": 136,
   "latest_successful_experimental": 136,
-  "latest_daily": 1086,
-  "latest_successful_daily": 1086
+  "latest_daily": 1087,
+  "latest_successful_daily": 1087
 }

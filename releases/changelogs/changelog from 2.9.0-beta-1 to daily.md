@@ -188,10 +188,12 @@ Mod is client-side only.
 ## What's Changed:
 >* Add API to get nearby ChaosIsland coordinate by @Algent in https://github.com/GTNewHorizons/Draconic-Evolution/pull/103 (1.5.27-GTNH)
 
-# Updated - Electro-Magic-Tools - 1.7.22 --> 1.7.23
-**Full Changelog**: https://github.com/GTNewHorizons/Electro-Magic-Tools/compare/1.7.22...1.7.23
+# Updated - Electro-Magic-Tools - 1.7.22 --> 1.7.24
+**Full Changelog**: https://github.com/GTNewHorizons/Electro-Magic-Tools/compare/1.7.22...1.7.24
 
 ## What's Changed:
+>* deprecate ic2 bounce pad by @LazyFlesh in https://github.com/GTNewHorizons/Electro-Magic-Tools/pull/121 (1.7.24)
+>* Deprecate ic2 glass by @LazyFlesh in https://github.com/GTNewHorizons/Electro-Magic-Tools/pull/118 (1.7.24)
 >* Deprecate ic2 iron fence by @LazyFlesh in https://github.com/GTNewHorizons/Electro-Magic-Tools/pull/119 (1.7.23)
 >* move aspect registry after a isModLoaded check for gt5 by @LazyFlesh in https://github.com/GTNewHorizons/Electro-Magic-Tools/pull/120 (1.7.23)
 
@@ -552,10 +554,15 @@ Mod is client-side only.
 >* Add check for "." being parsed with exponent E by @Miklebe in https://github.com/GTNewHorizons/ModularUI2/pull/136 (2.3.74-1.7.10)
 >* Fixed toggle button bgOverlay overriding theme bg by @TheYoingLad in https://github.com/GTNewHorizons/ModularUI2/pull/137 (2.3.74-1.7.10)
 
-# Updated - NewHorizonsCoreMod - 2.8.279 --> 2.8.294
-**Full Changelog**: https://github.com/GTNewHorizons/NewHorizonsCoreMod/compare/2.8.279...2.8.294
+# Updated - NewHorizonsCoreMod - 2.8.279 --> 2.8.296
+**Full Changelog**: https://github.com/GTNewHorizons/NewHorizonsCoreMod/compare/2.8.279...2.8.296
 
 ## What's Changed:
+>* reupdate rolled back deps  by @LazyFlesh in https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/1828 (2.8.296)
+>* Fix missing coremod cutting recipes in nei by @TotallyNotOndre in https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/1827 (2.8.295)
+>* replace ic2 to gt reinforced stone by @LazyFlesh in https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/1824 (2.8.295)
+>* deprecate ic2 glass recipes by @LazyFlesh in https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/1818 (2.8.295)
+>* replace ic2 rubber pad for gt, add recipe for sticky pad by @LazyFlesh in https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/1822 (2.8.295)
 >* Add space assembler recipe for neutronium compressor controller by @GDCloudstrike in https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/1826 (2.8.294)
 >* Deprecate ic2 iron fence by @LazyFlesh in https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/1819 (2.8.294)
 >* Remove Steel Dust Smeltery Melting by @UltraProdigy in https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/1821 (2.8.293)
