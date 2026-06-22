@@ -85,10 +85,11 @@ Mod is client-side only.
 >* Optimize Images & Workflow by @UltraProdigy in https://github.com/GTNewHorizons/BetterP2P/pull/42 (1.4.4)
 >* Fix ae2 colorutils by @MassAnarchyy in https://github.com/GTNewHorizons/BetterP2P/pull/43 (1.4.4)
 
-# Updated - BetterQuesting - 3.8.70-GTNH --> 3.8.71-GTNH
-**Full Changelog**: https://github.com/GTNewHorizons/BetterQuesting/compare/3.8.70-GTNH...3.8.71-GTNH
+# Updated - BetterQuesting - 3.8.70-GTNH --> 3.8.72-GTNH
+**Full Changelog**: https://github.com/GTNewHorizons/BetterQuesting/compare/3.8.70-GTNH...3.8.72-GTNH
 
 ## What's Changed:
+>* Add ColorUtils by @Ranzuu in https://github.com/GTNewHorizons/BetterQuesting/pull/235 (3.8.72-GTNH)
 >* Remove Text Formatting From Items in Reward/Task Panel by @UltraProdigy in https://github.com/GTNewHorizons/BetterQuesting/pull/234 (3.8.71-GTNH)
 
 # Updated - BloodArsenal - 1.5.10 --> 1.5.11
@@ -142,10 +143,11 @@ Mod is client-side only.
 ## What's Changed:
 >* Rework Tooltip #24433 by @Elyspio in https://github.com/GTNewHorizons/CosmeticArmorReworked/pull/6 (1.0.6-GTNH)
 
-# Updated - CropsNH - 2.0.69 --> 2.0.77
-**Full Changelog**: https://github.com/GTNewHorizons/CropsNH/compare/2.0.69...2.0.77
+# Updated - CropsNH - 2.0.69 --> 2.0.78
+**Full Changelog**: https://github.com/GTNewHorizons/CropsNH/compare/2.0.69...2.0.78
 
 ## What's Changed:
+>* IF: Fix auto-place and make input bus optional by @C0bra5 in https://github.com/GTNewHorizons/CropsNH/pull/171 (2.0.78)
 >* Remove eye of ender from enderbloom drops by @C0bra5 in https://github.com/GTNewHorizons/CropsNH/pull/168 (2.0.77)
 >* Show alternate seed items in a new NEI handler by @koolkrafter5 in https://github.com/GTNewHorizons/CropsNH/pull/163 (2.0.76)
 >* Add removal noise for cross crop by @C0bra5 in https://github.com/GTNewHorizons/CropsNH/pull/161 (2.0.75)
@@ -181,16 +183,22 @@ Mod is client-side only.
 >* Fix concurency issue: Client and Server thread both mutating same collection by @Algent in https://github.com/GTNewHorizons/Et-Futurum-Requiem/pull/82 (2.6.42-GTNH)
 >* Add oredict to bop/witchery Logs by @NotKaizul in https://github.com/GTNewHorizons/Et-Futurum-Requiem/pull/80 (2.6.41-GTNH)
 
-# Updated - ForestryMC - 4.11.26 --> 4.11.27
-**Full Changelog**: https://github.com/GTNewHorizons/ForestryMC/compare/4.11.26...4.11.27
+# Updated - ForestryMC - 4.11.26 --> 4.11.28
+**Full Changelog**: https://github.com/GTNewHorizons/ForestryMC/compare/4.11.26...4.11.28
 
 ## What's Changed:
+>* Add NEI overlays for the carpenter and fabricator by @tiffit in https://github.com/GTNewHorizons/ForestryMC/pull/123 (4.11.28)
 >* Add API method for protection amount on IArmorApiarist by @FourIsTheNumber in https://github.com/GTNewHorizons/ForestryMC/pull/122 (4.11.27)
 
-# Updated - GT5-Unofficial - 5.09.52.594 --> 5.09.52.617
-**Full Changelog**: https://github.com/GTNewHorizons/GT5-Unofficial/compare/5.09.52.594...5.09.52.617
+# Updated - GT5-Unofficial - 5.09.52.594 --> 5.09.52.618
+**Full Changelog**: https://github.com/GTNewHorizons/GT5-Unofficial/compare/5.09.52.594...5.09.52.618
 
 ## What's Changed:
+>* Fix input blocking by @AnsonYeung in https://github.com/GTNewHorizons/GT5-Unofficial/pull/7206 (5.09.52.618)
+>* Defer getInfoData() translation to client in gtplusplus by @Eldrinn-Elantey in https://github.com/GTNewHorizons/GT5-Unofficial/pull/7107 (5.09.52.618)
+>* Defer getInfoData() translation to client in tectech by @Eldrinn-Elantey in https://github.com/GTNewHorizons/GT5-Unofficial/pull/7113 (5.09.52.618)
+>* Defer getInfoData() translation to client in kubatech by @Eldrinn-Elantey in https://github.com/GTNewHorizons/GT5-Unofficial/pull/7112 (5.09.52.618)
+>* fix some multis hints by @Yoshy2002 in https://github.com/GTNewHorizons/GT5-Unofficial/pull/7205 (5.09.52.618)
 >* Add isGTRenderer by @RealSilverMoon in https://github.com/GTNewHorizons/GT5-Unofficial/pull/7203 (5.09.52.617)
 >* refactor(outputme): refactor filtering to CellInventoryHandler and improve filter message by @hinyb in https://github.com/GTNewHorizons/GT5-Unofficial/pull/7167 (5.09.52.617)
 >* Add assembler recipe for algae casings by @zaru-noodles in https://github.com/GTNewHorizons/GT5-Unofficial/pull/7201 (5.09.52.617)
@@ -372,10 +380,11 @@ Mod is client-side only.
 ## What's Changed:
 >* Close GUI when the block is destroyed by @Kogepan229 in https://github.com/GTNewHorizons/Hardcore-Ender-Expansion/pull/40 (1.12.23-GTNH)
 
-# Updated - Hodgepodge - 2.7.160 --> 2.7.162
-**Full Changelog**: https://github.com/GTNewHorizons/Hodgepodge/compare/2.7.160...2.7.162
+# Updated - Hodgepodge - 2.7.160 --> 2.7.163
+**Full Changelog**: https://github.com/GTNewHorizons/Hodgepodge/compare/2.7.160...2.7.163
 
 ## What's Changed:
+>* Include TextureAtlasSprite info in DumpTextureAtlasCommand by @tiffit in https://github.com/GTNewHorizons/Hodgepodge/pull/925 (2.7.163)
 >* Fix villager trading desync by @kurrycat2004 in https://github.com/GTNewHorizons/Hodgepodge/pull/826 (2.7.162)
 >* Fix GL_ALPHA_TEST and potion effect HUD rendering by @dipo33 in https://github.com/GTNewHorizons/Hodgepodge/pull/907 (2.7.161)
 >* addClientMixins instead of addCommonMixins for the "fixSaveFileWrittenToExistingDirectory" mixin by @Charsy89 in https://github.com/GTNewHorizons/Hodgepodge/pull/922 (2.7.161)
@@ -443,10 +452,11 @@ Mod is client-side only.
 ## What's Changed:
 >* Allow scroll wheel to change page in books by @Goldenlion5648 in https://github.com/GTNewHorizons/Mantle/pull/12 (0.5.3)
 
-# Updated - MatterManipulator - 0.1.37-GTNH --> 0.1.42-GTNH
-**Full Changelog**: https://github.com/GTNewHorizons/MatterManipulator/compare/0.1.37-GTNH...0.1.42-GTNH
+# Updated - MatterManipulator - 0.1.37-GTNH --> 0.1.43-GTNH
+**Full Changelog**: https://github.com/GTNewHorizons/MatterManipulator/compare/0.1.37-GTNH...0.1.43-GTNH
 
 ## What's Changed:
+>* Use new isGTRenderer method by @RecursivePineapple in https://github.com/GTNewHorizons/MatterManipulator/pull/62 (0.1.43-GTNH)
 >* Fix wireless access point connection by @LazyFlesh in https://github.com/GTNewHorizons/MatterManipulator/pull/61 (0.1.42-GTNH)
 >* Improve Hint Renderer by @RecursivePineapple in https://github.com/GTNewHorizons/MatterManipulator/pull/60 (0.1.41-GTNH)
 >* Fix container duping in some specific conditions by @Algent in https://github.com/GTNewHorizons/MatterManipulator/pull/59 (0.1.40-GTNH)
