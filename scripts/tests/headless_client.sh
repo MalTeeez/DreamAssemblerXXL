@@ -100,7 +100,6 @@ PY
 }
 
 cleanup() {
-  # [ -n "$JAVA_PID" ] && asprof stop -o collapsed -f "$RUN_DIR/client_profile.collapsed" "$JAVA_PID" 2>/dev/null
   [ -n "$GAME_PGID" ] && kill -TERM -- "-$GAME_PGID" 2>/dev/null
   stop_ffmpeg
   [ -n "$XVFB_PID" ] && kill -TERM "$XVFB_PID" 2>/dev/null
