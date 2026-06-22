@@ -316,8 +316,8 @@ jobs:
         working-directory: ${{ env.WORK_DIR }}/client/.minecraft/mods
         run: |
           set -euo pipefail
-          curl -sSL -o headlessnh-1.0.12.jar https://github.com/MalTeeez/HeadlessNH/releases/download/1.0.12/headlessnh-1.0.12.jar
-          echo "ce4057fb47d9659b4771feb2f8cdf5311aaadc1c8f6378f390841c547a2db402  headlessnh-1.0.12.jar" | sha256sum -c -
+          curl -sSL -o headlessnh-1.0.13.jar https://github.com/MalTeeez/HeadlessNH/releases/download/1.0.13/headlessnh-1.0.13.jar
+          echo "6d75e4af90949fd35f6be1bb4cc4a4ebc454d6a874795ffc8ff4dbeb928d1941  headlessnh-1.0.13.jar" | sha256sum -c -
 
       - name: Add HorizonQA to both client & server mods
         shell: bash
