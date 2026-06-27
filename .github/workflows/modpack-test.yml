@@ -2,8 +2,7 @@ name: Modpack test
 
 # Reusable workflow that runs the dual server/client smoke test against a set of
 # already-built modpack zips and publishes the resulting media (screenshots,
-# recording, flamegraph) to a rolling prerelease asset store. Callers (daily /
-# experimental / custom builds) produce a build bundle artifact and invoke this.
+# recording, flamegraph) to a rolling prerelease asset store (and uses them in the job summary). 
 
 on:
   workflow_call:
@@ -38,7 +37,7 @@ on:
         type: string
         required: true
       retention-days:
-        description: How many days of media to keep in the rolling asset store.
+        description: How many days assets should be kept in the rolling asset store.
         type: number
         default: 90
       max-assets:
@@ -183,6 +182,7 @@ jobs:
           --jvm-arg "-Dheadlessnh.gate.mainmenu=server.ready"
           --jvm-arg "-Dheadlessnh.gate.serverloaded=serverloaded.gate"
           --jvm-arg "-Dheadlessnh.gate.timeout=60000"
+          --jvm-arg "-Dheadlessnh.forcefocus=true"
           --game-dir ${{ env.WORK_DIR }}/client/.minecraft
 
       - name: Add HeadlessNH to client mods
@@ -190,8 +190,8 @@ jobs:
         working-directory: ${{ env.WORK_DIR }}/client/.minecraft/mods
         run: |
           set -euo pipefail
-          curl -sSL -o headlessnh-1.0.13.jar https://github.com/MalTeeez/HeadlessNH/releases/download/1.0.13/headlessnh-1.0.13.jar
-          echo "6d75e4af90949fd35f6be1bb4cc4a4ebc454d6a874795ffc8ff4dbeb928d1941  headlessnh-1.0.13.jar" | sha256sum -c -
+          curl -sSL -o headlessnh-1.1.0.jar https://github.com/GTNewHorizons/HeadlessNH/releases/download/1.1.0/headlessnh-1.1.0.jar
+          echo "9bc1258433938cfabb82220173eb4756cc202d680ea0a36e57a6aaf80ec55051  headlessnh-1.1.0.jar" | sha256sum -c -
 
       - name: Add HorizonQA to both client & server mods
         shell: bash
