@@ -536,10 +536,11 @@ Mod is client-side only.
 >* Replaced the destructive MusicTickerGC class with a mixin by @Charsy89 in https://github.com/GTNewHorizons/Galacticraft/pull/144 (3.4.31-GTNH)
 >* Move fluids to init to get them from gt5, not register own by @Pxx500 in https://github.com/GTNewHorizons/Galacticraft/pull/142 (3.4.30-GTNH)
 
-# Updated - GuideNH - 1.3.5 --> 1.3.9
-**Full Changelog**: https://github.com/GTNewHorizons/GuideNH/compare/1.3.5...1.3.9
+# Updated - GuideNH - 1.3.5 --> 1.3.10
+**Full Changelog**: https://github.com/GTNewHorizons/GuideNH/compare/1.3.5...1.3.10
 
 ## What's Changed:
+>* add default guide folder loading by @ABKQPO in https://github.com/GTNewHorizons/GuideNH/pull/33 (1.3.10)
 >* Add the xywh functionality for FloatingImage, and change the old wh to scale by @ABKQPO in https://github.com/GTNewHorizons/GuideNH/pull/23 (1.3.9)
 >* add default scaling for image by @ABKQPO in https://github.com/GTNewHorizons/GuideNH/pull/28 (1.3.9)
 >* make site export use lang by @ABKQPO in https://github.com/GTNewHorizons/GuideNH/pull/29 (1.3.9)

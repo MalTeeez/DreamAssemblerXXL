@@ -98108,7 +98108,7 @@
     },
     {
       "name": "GuideNH",
-      "latest_version": "1.3.9",
+      "latest_version": "1.3.10",
       "private": false,
       "versions": [
         {
@@ -98179,6 +98179,16 @@
           "filename": "guidenh-1.3.9.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/GuideNH/releases/assets/457742520",
           "browser_download_url": "https://github.com/GTNewHorizons/GuideNH/releases/download/1.3.9/guidenh-1.3.9.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "1.3.10",
+          "changelog": "## What's Changed\n* add default guide folder loading by @ABKQPO in https://github.com/GTNewHorizons/GuideNH/pull/33\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/GuideNH/compare/1.3.9...1.3.10\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-28T16:18:31+00:00",
+          "filename": "guidenh-1.3.10.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/GuideNH/releases/assets/460343174",
+          "browser_download_url": "https://github.com/GTNewHorizons/GuideNH/releases/download/1.3.10/guidenh-1.3.10.jar",
           "extra_assets": []
         }
       ],
@@ -192341,6 +192351,6 @@
   ],
   "latest_experimental": 136,
   "latest_successful_experimental": 136,
-  "latest_daily": 1100,
-  "latest_successful_daily": 1100
+  "latest_daily": 1101,
+  "latest_successful_daily": 1101
 }
