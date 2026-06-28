@@ -196,6 +196,7 @@ done
 
 # 5. if still up, close nicely, then escalate
 if kill -0 -- "-$GAME_PGID" 2>/dev/null; then
+  kill -3 -- "-$GAME_PGID"
   if close_window_nicely; then
     echo "asked window to close; waiting up to ${CLIENT_GRACE_TIMEOUT}s for save & exit"
   else
