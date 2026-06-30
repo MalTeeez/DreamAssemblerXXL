@@ -1,7 +1,7 @@
 {
   "config": {
     "name": "GT-New-Horizons-Modpack",
-    "latest_version": "2.9.0-nightly-2026-06-28",
+    "latest_version": "2.9.0-nightly-2026-06-30",
     "needs_attention": false,
     "versions": [
       {
@@ -7213,6 +7213,26 @@
         "download_url": "https://api.github.com/repos/GTNewHorizons/GT-New-Horizons-Modpack/releases/assets/459792200",
         "browser_download_url": "https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/releases/download/2.9.0-nightly-2026-06-28/2.9.0-nightly-2026-06-28.zip",
         "extra_assets": []
+      },
+      {
+        "version_tag": "2.9.0-nightly-2026-06-29",
+        "changelog": "",
+        "prerelease": false,
+        "tagged_at": "2026-06-29T03:54:28+00:00",
+        "filename": "2.9.0-nightly-2026-06-29.zip",
+        "download_url": "https://api.github.com/repos/GTNewHorizons/GT-New-Horizons-Modpack/releases/assets/460744118",
+        "browser_download_url": "https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/releases/download/2.9.0-nightly-2026-06-29/2.9.0-nightly-2026-06-29.zip",
+        "extra_assets": []
+      },
+      {
+        "version_tag": "2.9.0-nightly-2026-06-30",
+        "changelog": "",
+        "prerelease": false,
+        "tagged_at": "2026-06-30T05:05:04+00:00",
+        "filename": "2.9.0-nightly-2026-06-30.zip",
+        "download_url": "https://api.github.com/repos/GTNewHorizons/GT-New-Horizons-Modpack/releases/assets/461832019",
+        "browser_download_url": "https://github.com/GTNewHorizons/GT-New-Horizons-Modpack/releases/download/2.9.0-nightly-2026-06-30/2.9.0-nightly-2026-06-30.zip",
+        "extra_assets": []
       }
     ],
     "type": "config",
@@ -7227,20 +7247,20 @@
         "version_tag": "de_DE-latest",
         "changelog": "",
         "prerelease": false,
-        "tagged_at": "2026-06-28T06:18:48+00:00",
-        "filename": "GTNH-de_DE-Translation-Daily-2026-06-28+368.zip",
-        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/460034096",
-        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/de_DE-latest/GTNH-de_DE-Translation-Daily-2026-06-28%2B368.zip",
+        "tagged_at": "2026-06-29T06:40:00+00:00",
+        "filename": "GTNH-de_DE-Translation-Daily-2026-06-29+369.zip",
+        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/460848001",
+        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/de_DE-latest/GTNH-de_DE-Translation-Daily-2026-06-29%2B369.zip",
         "extra_assets": []
       },
       {
         "version_tag": "es_ES-latest",
         "changelog": "",
         "prerelease": false,
-        "tagged_at": "2026-06-28T06:10:59+00:00",
-        "filename": "GTNH-es_ES-Translation-Daily-2026-06-28+368.zip",
-        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/460030820",
-        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/es_ES-latest/GTNH-es_ES-Translation-Daily-2026-06-28%2B368.zip",
+        "tagged_at": "2026-06-29T06:30:45+00:00",
+        "filename": "GTNH-es_ES-Translation-Daily-2026-06-29+369.zip",
+        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/460842666",
+        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/es_ES-latest/GTNH-es_ES-Translation-Daily-2026-06-29%2B369.zip",
         "extra_assets": []
       },
       {
@@ -7257,70 +7277,70 @@
         "version_tag": "ja_JP-latest",
         "changelog": "",
         "prerelease": false,
-        "tagged_at": "2026-06-28T05:53:57+00:00",
-        "filename": "GTNH-ja_JP-Translation-Daily-2026-06-28+368.zip",
-        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/460024877",
-        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/ja_JP-latest/GTNH-ja_JP-Translation-Daily-2026-06-28%2B368.zip",
+        "tagged_at": "2026-06-29T06:13:37+00:00",
+        "filename": "GTNH-ja_JP-Translation-Daily-2026-06-29+369.zip",
+        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/460832212",
+        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/ja_JP-latest/GTNH-ja_JP-Translation-Daily-2026-06-29%2B369.zip",
         "extra_assets": []
       },
       {
         "version_tag": "ko_KR-latest",
         "changelog": "",
         "prerelease": false,
-        "tagged_at": "2026-06-28T05:58:28+00:00",
-        "filename": "GTNH-ko_KR-Translation-Daily-2026-06-28+368.zip",
-        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/460026377",
-        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/ko_KR-latest/GTNH-ko_KR-Translation-Daily-2026-06-28%2B368.zip",
+        "tagged_at": "2026-06-29T06:18:13+00:00",
+        "filename": "GTNH-ko_KR-Translation-Daily-2026-06-29+369.zip",
+        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/460834909",
+        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/ko_KR-latest/GTNH-ko_KR-Translation-Daily-2026-06-29%2B369.zip",
         "extra_assets": []
       },
       {
         "version_tag": "pl_PL-latest",
         "changelog": "",
         "prerelease": false,
-        "tagged_at": "2026-06-28T06:22:49+00:00",
-        "filename": "GTNH-pl_PL-Translation-Daily-2026-06-28+368.zip",
-        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/460035771",
-        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/pl_PL-latest/GTNH-pl_PL-Translation-Daily-2026-06-28%2B368.zip",
+        "tagged_at": "2026-06-29T06:44:05+00:00",
+        "filename": "GTNH-pl_PL-Translation-Daily-2026-06-29+369.zip",
+        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/460850510",
+        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/pl_PL-latest/GTNH-pl_PL-Translation-Daily-2026-06-29%2B369.zip",
         "extra_assets": []
       },
       {
         "version_tag": "pt_BR-latest",
         "changelog": "",
         "prerelease": false,
-        "tagged_at": "2026-06-28T06:02:49+00:00",
-        "filename": "GTNH-pt_BR-Translation-Daily-2026-06-28+368.zip",
-        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/460027907",
-        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/pt_BR-latest/GTNH-pt_BR-Translation-Daily-2026-06-28%2B368.zip",
+        "tagged_at": "2026-06-29T06:22:42+00:00",
+        "filename": "GTNH-pt_BR-Translation-Daily-2026-06-29+369.zip",
+        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/460837946",
+        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/pt_BR-latest/GTNH-pt_BR-Translation-Daily-2026-06-29%2B369.zip",
         "extra_assets": []
       },
       {
         "version_tag": "ru_RU-latest",
         "changelog": "",
         "prerelease": false,
-        "tagged_at": "2026-06-28T06:25:56+00:00",
-        "filename": "GTNH-ru_RU-Translation-Daily-2026-06-28+368.zip",
-        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/460037059",
-        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/ru_RU-latest/GTNH-ru_RU-Translation-Daily-2026-06-28%2B368.zip",
+        "tagged_at": "2026-06-29T06:47:37+00:00",
+        "filename": "GTNH-ru_RU-Translation-Daily-2026-06-29+369.zip",
+        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/460852984",
+        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/ru_RU-latest/GTNH-ru_RU-Translation-Daily-2026-06-29%2B369.zip",
         "extra_assets": []
       },
       {
         "version_tag": "tr_TR-latest",
         "changelog": "",
         "prerelease": false,
-        "tagged_at": "2026-06-28T06:14:54+00:00",
-        "filename": "GTNH-tr_TR-Translation-Daily-2026-06-28+368.zip",
-        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/460032580",
-        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/tr_TR-latest/GTNH-tr_TR-Translation-Daily-2026-06-28%2B368.zip",
+        "tagged_at": "2026-06-29T06:35:28+00:00",
+        "filename": "GTNH-tr_TR-Translation-Daily-2026-06-29+369.zip",
+        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/460845483",
+        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/tr_TR-latest/GTNH-tr_TR-Translation-Daily-2026-06-29%2B369.zip",
         "extra_assets": []
       },
       {
         "version_tag": "zh_CN-latest",
         "changelog": "",
         "prerelease": false,
-        "tagged_at": "2026-06-28T05:50:32+00:00",
-        "filename": "GTNH-zh_CN-Translation-Daily-2026-06-28+368.zip",
-        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/460023502",
-        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/zh_CN-latest/GTNH-zh_CN-Translation-Daily-2026-06-28%2B368.zip",
+        "tagged_at": "2026-06-29T06:10:29+00:00",
+        "filename": "GTNH-zh_CN-Translation-Daily-2026-06-29+369.zip",
+        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/460830428",
+        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/zh_CN-latest/GTNH-zh_CN-Translation-Daily-2026-06-29%2B369.zip",
         "extra_assets": []
       }
     ],
@@ -14830,7 +14850,7 @@
     },
     {
       "name": "Angelica",
-      "latest_version": "2.1.46",
+      "latest_version": "2.1.49",
       "private": false,
       "versions": [
         {
@@ -16871,6 +16891,36 @@
           "filename": "angelica-2.1.46.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/Angelica/releases/assets/459786319",
           "browser_download_url": "https://github.com/GTNewHorizons/Angelica/releases/download/2.1.46/angelica-2.1.46.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "2.1.47",
+          "changelog": "## What's Changed\n* Betweenlands fix by @mitchej123 in https://github.com/GTNewHorizons/Angelica/pull/1894\n* Support more glDrawElement overloads in display lists by @mitchej123 in https://github.com/GTNewHorizons/Angelica/pull/1895\n* Fix space elevator cable by @mitchej123 in https://github.com/GTNewHorizons/Angelica/pull/1896\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/Angelica/compare/2.1.46...2.1.47\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-28T23:36:52+00:00",
+          "filename": "angelica-2.1.47.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/Angelica/releases/assets/460570641",
+          "browser_download_url": "https://github.com/GTNewHorizons/Angelica/releases/download/2.1.47/angelica-2.1.47.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "2.1.48",
+          "changelog": "## What's Changed\n* Add shader setting search functionality and center selection by @SpacEagle17 in https://github.com/GTNewHorizons/Angelica/pull/1897\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/Angelica/compare/2.1.47...2.1.48\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-30T02:41:51+00:00",
+          "filename": "angelica-2.1.48.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/Angelica/releases/assets/461739999",
+          "browser_download_url": "https://github.com/GTNewHorizons/Angelica/releases/download/2.1.48/angelica-2.1.48.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "2.1.49",
+          "changelog": "## What's Changed\n* No point continuously building clouds if we're not rendering them... by @mitchej123 in https://github.com/GTNewHorizons/Angelica/pull/1900\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/Angelica/compare/2.1.48...2.1.49\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-30T03:19:52+00:00",
+          "filename": "angelica-2.1.49.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/Angelica/releases/assets/461764579",
+          "browser_download_url": "https://github.com/GTNewHorizons/Angelica/releases/download/2.1.49/angelica-2.1.49.jar",
           "extra_assets": []
         }
       ],
@@ -34918,7 +34968,7 @@
     },
     {
       "name": "BlockRenderer6343",
-      "latest_version": "1.4.14",
+      "latest_version": "1.4.15",
       "private": false,
       "versions": [
         {
@@ -35640,6 +35690,16 @@
           "filename": "blockrenderer6343-1.4.14.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/BlockRenderer6343/releases/assets/441046400",
           "browser_download_url": "https://github.com/GTNewHorizons/BlockRenderer6343/releases/download/1.4.14/blockrenderer6343-1.4.14.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "1.4.15",
+          "changelog": "## What's Changed\n* Override maximum glass tier for main tier by @AnsonYeung in https://github.com/GTNewHorizons/BlockRenderer6343/pull/52\n\n## New Contributors\n* @AnsonYeung made their first contribution in https://github.com/GTNewHorizons/BlockRenderer6343/pull/52\n\n**Full Changelog**: https://github.com/GTNewHorizons/BlockRenderer6343/compare/1.4.14...1.4.15\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-29T03:53:58+00:00",
+          "filename": "blockrenderer6343-1.4.15.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/BlockRenderer6343/releases/assets/460743834",
+          "browser_download_url": "https://github.com/GTNewHorizons/BlockRenderer6343/releases/download/1.4.15/blockrenderer6343-1.4.15.jar",
           "extra_assets": []
         }
       ],
@@ -44721,7 +44781,7 @@
     },
     {
       "name": "CropsNH",
-      "latest_version": "2.0.82",
+      "latest_version": "2.0.84",
       "private": false,
       "versions": [
         {
@@ -45552,6 +45612,26 @@
           "filename": "cropsnh-2.0.82.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/CropsNH/releases/assets/459019060",
           "browser_download_url": "https://github.com/GTNewHorizons/CropsNH/releases/download/2.0.82/cropsnh-2.0.82.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "2.0.83",
+          "changelog": "## What's Changed\n* Add missing recipe tier checks to crop breeder and synthesizer. by @C0bra5 in https://github.com/GTNewHorizons/CropsNH/pull/181\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/CropsNH/compare/2.0.82...2.0.83\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-29T23:50:35+00:00",
+          "filename": "cropsnh-2.0.83.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/CropsNH/releases/assets/461611645",
+          "browser_download_url": "https://github.com/GTNewHorizons/CropsNH/releases/download/2.0.83/cropsnh-2.0.83.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "2.0.84",
+          "changelog": "## What's Changed\n* Water artichoke alt seed, and EFR stone liliy fix and some cleanup by @C0bra5 in https://github.com/GTNewHorizons/CropsNH/pull/182\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/CropsNH/compare/2.0.83...2.0.84\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-30T04:23:30+00:00",
+          "filename": "cropsnh-2.0.84.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/CropsNH/releases/assets/461805424",
+          "browser_download_url": "https://github.com/GTNewHorizons/CropsNH/releases/download/2.0.84/cropsnh-2.0.84.jar",
           "extra_assets": []
         }
       ],
@@ -54640,7 +54720,7 @@
     },
     {
       "name": "ForestryMC",
-      "latest_version": "4.11.28",
+      "latest_version": "4.11.29",
       "private": false,
       "versions": [
         {
@@ -55933,6 +56013,16 @@
           "filename": "Forestry-4.11.28.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/ForestryMC/releases/assets/452448286",
           "browser_download_url": "https://github.com/GTNewHorizons/ForestryMC/releases/download/4.11.28/Forestry-4.11.28.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "4.11.29",
+          "changelog": "## What's Changed\n* Fix Worktable NEI fill regression by @YannickMG in https://github.com/GTNewHorizons/ForestryMC/pull/124\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/ForestryMC/compare/4.11.28...4.11.29\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-29T03:54:20+00:00",
+          "filename": "Forestry-4.11.29.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/ForestryMC/releases/assets/460744035",
+          "browser_download_url": "https://github.com/GTNewHorizons/ForestryMC/releases/download/4.11.29/Forestry-4.11.29.jar",
           "extra_assets": []
         }
       ],
@@ -62634,7 +62724,7 @@
     },
     {
       "name": "GT5-Unofficial",
-      "latest_version": "5.09.54.01",
+      "latest_version": "5.09.54.04",
       "private": false,
       "versions": [
         {
@@ -87645,6 +87735,36 @@
           "filename": "gregtech-5.09.54.01.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/GT5-Unofficial/releases/assets/460202137",
           "browser_download_url": "https://github.com/GTNewHorizons/GT5-Unofficial/releases/download/5.09.54.01/gregtech-5.09.54.01.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "5.09.54.02",
+          "changelog": "## What's Changed\n* Fix YOT Hatch Sticky Mode blocking external AE fluid insertion by @ChromicRedBrick in https://github.com/GTNewHorizons/GT5-Unofficial/pull/7297\n* Fix ore vein geometry changing across chunk generation order by @Kogepan229 in https://github.com/GTNewHorizons/GT5-Unofficial/pull/7215\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/GT5-Unofficial/compare/5.09.54.01...5.09.54.02\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-28T17:19:29+00:00",
+          "filename": "gregtech-5.09.54.02.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/GT5-Unofficial/releases/assets/460376357",
+          "browser_download_url": "https://github.com/GTNewHorizons/GT5-Unofficial/releases/download/5.09.54.02/gregtech-5.09.54.02.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "5.09.54.03",
+          "changelog": "## What's Changed\n* Re-add putting max tier at end of glass list by @Ruling-0 in https://github.com/GTNewHorizons/GT5-Unofficial/pull/7301\n* Expose max glass tier for BlockRenderer by @AnsonYeung in https://github.com/GTNewHorizons/GT5-Unofficial/pull/7300\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/GT5-Unofficial/compare/5.09.54.02...5.09.54.03\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-28T19:48:43+00:00",
+          "filename": "gregtech-5.09.54.03.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/GT5-Unofficial/releases/assets/460454620",
+          "browser_download_url": "https://github.com/GTNewHorizons/GT5-Unofficial/releases/download/5.09.54.03/gregtech-5.09.54.03.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "5.09.54.04",
+          "changelog": "## What's Changed\n* Allow C2S for NAC by @AnsonYeung in https://github.com/GTNewHorizons/GT5-Unofficial/pull/7304\n* Make MTEBeamCrafter use ProcessingLogic to support CRIB by @AnsonYeung in https://github.com/GTNewHorizons/GT5-Unofficial/pull/7303\n* Attempt to have sawblade finish at a 90-degree angle by @tiffit in https://github.com/GTNewHorizons/GT5-Unofficial/pull/7306\n* arc furnace fix... again by @Pxx500 in https://github.com/GTNewHorizons/GT5-Unofficial/pull/7302\n* Add Advanced Wireless Machine Controller Cover by @KleinGrrmpf in https://github.com/GTNewHorizons/GT5-Unofficial/pull/6294\n* [MUI2] Ported MTESolarGenerator to MUI2 by @TheYoingLad in https://github.com/GTNewHorizons/GT5-Unofficial/pull/6907\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/GT5-Unofficial/compare/5.09.54.03...5.09.54.04\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-30T05:21:58+00:00",
+          "filename": "gregtech-5.09.54.04.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/GT5-Unofficial/releases/assets/461841502",
+          "browser_download_url": "https://github.com/GTNewHorizons/GT5-Unofficial/releases/download/5.09.54.04/gregtech-5.09.54.04.jar",
           "extra_assets": []
         }
       ],
@@ -112764,7 +112884,7 @@
     },
     {
       "name": "LogisticsPipes",
-      "latest_version": "1.5.27-GTNH",
+      "latest_version": "1.5.28-GTNH",
       "private": false,
       "versions": [
         {
@@ -114047,6 +114167,16 @@
           "filename": "logisticspipes-1.5.27-GTNH.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/LogisticsPipes/releases/assets/453478517",
           "browser_download_url": "https://github.com/GTNewHorizons/LogisticsPipes/releases/download/1.5.27-GTNH/logisticspipes-1.5.27-GTNH.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "1.5.28-GTNH",
+          "changelog": "## What's Changed\n* Add ComputerCraft/OpenComputers commands to the Fluid Request pipe by @DerekChan65535 in https://github.com/GTNewHorizons/LogisticsPipes/pull/125\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/LogisticsPipes/compare/1.5.27-GTNH...1.5.28-GTNH\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-30T05:11:10+00:00",
+          "filename": "logisticspipes-1.5.28-GTNH.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/LogisticsPipes/releases/assets/461835645",
+          "browser_download_url": "https://github.com/GTNewHorizons/LogisticsPipes/releases/download/1.5.28-GTNH/logisticspipes-1.5.28-GTNH.jar",
           "extra_assets": []
         }
       ],
@@ -118722,7 +118852,7 @@
     },
     {
       "name": "Mantle",
-      "latest_version": "0.5.3",
+      "latest_version": "0.5.4",
       "private": false,
       "versions": [
         {
@@ -118834,6 +118964,16 @@
           "filename": "Mantle-0.5.3.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/Mantle/releases/assets/442089565",
           "browser_download_url": "https://github.com/GTNewHorizons/Mantle/releases/download/0.5.3/Mantle-0.5.3.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "0.5.4",
+          "changelog": "## What's Changed\n* Add ability to override metadata for MultiItemBlock localization string by @tiffit in https://github.com/GTNewHorizons/Mantle/pull/13\n\n## New Contributors\n* @tiffit made their first contribution in https://github.com/GTNewHorizons/Mantle/pull/13\n\n**Full Changelog**: https://github.com/GTNewHorizons/Mantle/compare/0.5.3...0.5.4\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-29T00:30:11+00:00",
+          "filename": "Mantle-0.5.4.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/Mantle/releases/assets/460607635",
+          "browser_download_url": "https://github.com/GTNewHorizons/Mantle/releases/download/0.5.4/Mantle-0.5.4.jar",
           "extra_assets": []
         }
       ],
@@ -120516,7 +120656,7 @@
     },
     {
       "name": "Mobs-Info",
-      "latest_version": "0.5.17-GTNH",
+      "latest_version": "0.5.18-GTNH",
       "private": false,
       "versions": [
         {
@@ -121098,6 +121238,16 @@
           "filename": "mobsinfo-0.5.17-GTNH.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/Mobs-Info/releases/assets/441131137",
           "browser_download_url": "https://github.com/GTNewHorizons/Mobs-Info/releases/download/0.5.17-GTNH/mobsinfo-0.5.17-GTNH.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "0.5.18-GTNH",
+          "changelog": "**Full Changelog**: https://github.com/GTNewHorizons/Mobs-Info/compare/0.5.17-GTNH...0.5.18-GTNH\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-28T18:14:53+00:00",
+          "filename": "mobsinfo-0.5.18-GTNH.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/Mobs-Info/releases/assets/460404760",
+          "browser_download_url": "https://github.com/GTNewHorizons/Mobs-Info/releases/download/0.5.18-GTNH/mobsinfo-0.5.18-GTNH.jar",
           "extra_assets": []
         }
       ],
@@ -125709,7 +125859,7 @@
     },
     {
       "name": "Navigator",
-      "latest_version": "1.1.3",
+      "latest_version": "1.1.4",
       "private": false,
       "versions": [
         {
@@ -125931,6 +126081,16 @@
           "filename": "navigator-1.1.3.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/Navigator/releases/assets/416209998",
           "browser_download_url": "https://github.com/GTNewHorizons/Navigator/releases/download/1.1.3/navigator-1.1.3.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "1.1.4",
+          "changelog": "## What's Changed\n* Add NEI style rendering if available (coloured filters) by @Algent in https://github.com/GTNewHorizons/Navigator/pull/17\n\n## New Contributors\n* @Algent made their first contribution in https://github.com/GTNewHorizons/Navigator/pull/17\n\n**Full Changelog**: https://github.com/GTNewHorizons/Navigator/compare/1.1.3...1.1.4\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-28T18:03:01+00:00",
+          "filename": "navigator-1.1.4.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/Navigator/releases/assets/460398432",
+          "browser_download_url": "https://github.com/GTNewHorizons/Navigator/releases/download/1.1.4/navigator-1.1.4.jar",
           "extra_assets": []
         }
       ],
@@ -151140,7 +151300,7 @@
     },
     {
       "name": "NotEnoughItems",
-      "latest_version": "2.8.106-GTNH",
+      "latest_version": "2.8.109-GTNH",
       "private": false,
       "versions": [
         {
@@ -155562,6 +155722,36 @@
           "filename": "NotEnoughItems-2.8.106-GTNH.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/NotEnoughItems/releases/assets/459496549",
           "browser_download_url": "https://github.com/GTNewHorizons/NotEnoughItems/releases/download/2.8.106-GTNH/NotEnoughItems-2.8.106-GTNH.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "2.8.107-GTNH",
+          "changelog": "## What's Changed\n* Allow plugins to force fill mode for overlay button by @slprime in https://github.com/GTNewHorizons/NotEnoughItems/pull/960\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/NotEnoughItems/compare/2.8.106-GTNH...2.8.107-GTNH\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-28T17:19:14+00:00",
+          "filename": "NotEnoughItems-2.8.107-GTNH.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/NotEnoughItems/releases/assets/460376272",
+          "browser_download_url": "https://github.com/GTNewHorizons/NotEnoughItems/releases/download/2.8.107-GTNH/NotEnoughItems-2.8.107-GTNH.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "2.8.108-GTNH",
+          "changelog": "## What's Changed\n* Add item name aliases for search by @slprime in https://github.com/GTNewHorizons/NotEnoughItems/pull/961\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/NotEnoughItems/compare/2.8.107-GTNH...2.8.108-GTNH\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-29T17:23:48+00:00",
+          "filename": "NotEnoughItems-2.8.108-GTNH.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/NotEnoughItems/releases/assets/461340341",
+          "browser_download_url": "https://github.com/GTNewHorizons/NotEnoughItems/releases/download/2.8.108-GTNH/NotEnoughItems-2.8.108-GTNH.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "2.8.109-GTNH",
+          "changelog": "## What's Changed\n* Fix Debug Handler by @slprime in https://github.com/GTNewHorizons/NotEnoughItems/pull/963\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/NotEnoughItems/compare/2.8.108-GTNH...2.8.109-GTNH\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-29T17:47:44+00:00",
+          "filename": "NotEnoughItems-2.8.109-GTNH.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/NotEnoughItems/releases/assets/461356843",
+          "browser_download_url": "https://github.com/GTNewHorizons/NotEnoughItems/releases/download/2.8.109-GTNH/NotEnoughItems-2.8.109-GTNH.jar",
           "extra_assets": []
         }
       ],
@@ -187029,7 +187219,7 @@
     },
     {
       "name": "VisualProspecting",
-      "latest_version": "1.5.30",
+      "latest_version": "1.5.32",
       "private": false,
       "versions": [
         {
@@ -188112,6 +188302,26 @@
           "filename": "visualprospecting-1.5.30.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/VisualProspecting/releases/assets/448500287",
           "browser_download_url": "https://github.com/GTNewHorizons/VisualProspecting/releases/download/1.5.30/visualprospecting-1.5.30.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "1.5.31",
+          "changelog": "## What's Changed\n* Adapt to GT5u change by @Kogepan229 in https://github.com/GTNewHorizons/VisualProspecting/pull/95\n\n## New Contributors\n* @Kogepan229 made their first contribution in https://github.com/GTNewHorizons/VisualProspecting/pull/95\n\n**Full Changelog**: https://github.com/GTNewHorizons/VisualProspecting/compare/1.5.30...1.5.31\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-28T17:33:40+00:00",
+          "filename": "visualprospecting-1.5.31.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/VisualProspecting/releases/assets/460383590",
+          "browser_download_url": "https://github.com/GTNewHorizons/VisualProspecting/releases/download/1.5.31/visualprospecting-1.5.31.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "1.5.32",
+          "changelog": "## What's Changed\n* Add NEI style search modes to ore overlay by @Algent in https://github.com/GTNewHorizons/VisualProspecting/pull/94\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/VisualProspecting/compare/1.5.31...1.5.32\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-28T17:53:13+00:00",
+          "filename": "visualprospecting-1.5.32.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/VisualProspecting/releases/assets/460393706",
+          "browser_download_url": "https://github.com/GTNewHorizons/VisualProspecting/releases/download/1.5.32/visualprospecting-1.5.32.jar",
           "extra_assets": []
         }
       ],
@@ -192351,6 +192561,6 @@
   ],
   "latest_experimental": 136,
   "latest_successful_experimental": 136,
-  "latest_daily": 1101,
-  "latest_successful_daily": 1101
+  "latest_daily": 1103,
+  "latest_successful_daily": 1103
 }
