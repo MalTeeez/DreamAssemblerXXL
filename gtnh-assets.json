@@ -7247,100 +7247,100 @@
         "version_tag": "de_DE-latest",
         "changelog": "",
         "prerelease": false,
-        "tagged_at": "2026-06-29T06:40:00+00:00",
-        "filename": "GTNH-de_DE-Translation-Daily-2026-06-29+369.zip",
-        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/460848001",
-        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/de_DE-latest/GTNH-de_DE-Translation-Daily-2026-06-29%2B369.zip",
+        "tagged_at": "2026-07-01T06:30:44+00:00",
+        "filename": "GTNH-de_DE-Translation-Daily-2026-07-01+371.zip",
+        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/462909406",
+        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/de_DE-latest/GTNH-de_DE-Translation-Daily-2026-07-01%2B371.zip",
         "extra_assets": []
       },
       {
         "version_tag": "es_ES-latest",
         "changelog": "",
         "prerelease": false,
-        "tagged_at": "2026-06-29T06:30:45+00:00",
-        "filename": "GTNH-es_ES-Translation-Daily-2026-06-29+369.zip",
-        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/460842666",
-        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/es_ES-latest/GTNH-es_ES-Translation-Daily-2026-06-29%2B369.zip",
+        "tagged_at": "2026-07-01T06:21:39+00:00",
+        "filename": "GTNH-es_ES-Translation-Daily-2026-07-01+371.zip",
+        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/462903449",
+        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/es_ES-latest/GTNH-es_ES-Translation-Daily-2026-07-01%2B371.zip",
         "extra_assets": []
       },
       {
         "version_tag": "fr_FR-latest",
         "changelog": "",
         "prerelease": false,
-        "tagged_at": "2026-06-28T06:06:47+00:00",
-        "filename": "GTNH-fr_FR-Translation-Daily-2026-06-28+368.zip",
-        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/460029346",
-        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/fr_FR-latest/GTNH-fr_FR-Translation-Daily-2026-06-28%2B368.zip",
+        "tagged_at": "2026-07-01T06:17:06+00:00",
+        "filename": "GTNH-fr_FR-Translation-Daily-2026-07-01+371.zip",
+        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/462900293",
+        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/fr_FR-latest/GTNH-fr_FR-Translation-Daily-2026-07-01%2B371.zip",
         "extra_assets": []
       },
       {
         "version_tag": "ja_JP-latest",
         "changelog": "",
         "prerelease": false,
-        "tagged_at": "2026-06-29T06:13:37+00:00",
-        "filename": "GTNH-ja_JP-Translation-Daily-2026-06-29+369.zip",
-        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/460832212",
-        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/ja_JP-latest/GTNH-ja_JP-Translation-Daily-2026-06-29%2B369.zip",
+        "tagged_at": "2026-07-01T06:03:17+00:00",
+        "filename": "GTNH-ja_JP-Translation-Daily-2026-07-01+371.zip",
+        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/462891264",
+        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/ja_JP-latest/GTNH-ja_JP-Translation-Daily-2026-07-01%2B371.zip",
         "extra_assets": []
       },
       {
         "version_tag": "ko_KR-latest",
         "changelog": "",
         "prerelease": false,
-        "tagged_at": "2026-06-29T06:18:13+00:00",
-        "filename": "GTNH-ko_KR-Translation-Daily-2026-06-29+369.zip",
-        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/460834909",
-        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/ko_KR-latest/GTNH-ko_KR-Translation-Daily-2026-06-29%2B369.zip",
+        "tagged_at": "2026-07-01T06:07:43+00:00",
+        "filename": "GTNH-ko_KR-Translation-Daily-2026-07-01+371.zip",
+        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/462894203",
+        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/ko_KR-latest/GTNH-ko_KR-Translation-Daily-2026-07-01%2B371.zip",
         "extra_assets": []
       },
       {
         "version_tag": "pl_PL-latest",
         "changelog": "",
         "prerelease": false,
-        "tagged_at": "2026-06-29T06:44:05+00:00",
-        "filename": "GTNH-pl_PL-Translation-Daily-2026-06-29+369.zip",
-        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/460850510",
-        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/pl_PL-latest/GTNH-pl_PL-Translation-Daily-2026-06-29%2B369.zip",
+        "tagged_at": "2026-07-01T06:35:05+00:00",
+        "filename": "GTNH-pl_PL-Translation-Daily-2026-07-01+371.zip",
+        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/462912174",
+        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/pl_PL-latest/GTNH-pl_PL-Translation-Daily-2026-07-01%2B371.zip",
         "extra_assets": []
       },
       {
         "version_tag": "pt_BR-latest",
         "changelog": "",
         "prerelease": false,
-        "tagged_at": "2026-06-29T06:22:42+00:00",
-        "filename": "GTNH-pt_BR-Translation-Daily-2026-06-29+369.zip",
-        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/460837946",
-        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/pt_BR-latest/GTNH-pt_BR-Translation-Daily-2026-06-29%2B369.zip",
+        "tagged_at": "2026-07-01T06:12:48+00:00",
+        "filename": "GTNH-pt_BR-Translation-Daily-2026-07-01+371.zip",
+        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/462897455",
+        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/pt_BR-latest/GTNH-pt_BR-Translation-Daily-2026-07-01%2B371.zip",
         "extra_assets": []
       },
       {
         "version_tag": "ru_RU-latest",
         "changelog": "",
         "prerelease": false,
-        "tagged_at": "2026-06-29T06:47:37+00:00",
-        "filename": "GTNH-ru_RU-Translation-Daily-2026-06-29+369.zip",
-        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/460852984",
-        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/ru_RU-latest/GTNH-ru_RU-Translation-Daily-2026-06-29%2B369.zip",
+        "tagged_at": "2026-07-01T06:38:32+00:00",
+        "filename": "GTNH-ru_RU-Translation-Daily-2026-07-01+371.zip",
+        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/462914683",
+        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/ru_RU-latest/GTNH-ru_RU-Translation-Daily-2026-07-01%2B371.zip",
         "extra_assets": []
       },
       {
         "version_tag": "tr_TR-latest",
         "changelog": "",
         "prerelease": false,
-        "tagged_at": "2026-06-29T06:35:28+00:00",
-        "filename": "GTNH-tr_TR-Translation-Daily-2026-06-29+369.zip",
-        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/460845483",
-        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/tr_TR-latest/GTNH-tr_TR-Translation-Daily-2026-06-29%2B369.zip",
+        "tagged_at": "2026-07-01T06:26:02+00:00",
+        "filename": "GTNH-tr_TR-Translation-Daily-2026-07-01+371.zip",
+        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/462905857",
+        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/tr_TR-latest/GTNH-tr_TR-Translation-Daily-2026-07-01%2B371.zip",
         "extra_assets": []
       },
       {
         "version_tag": "zh_CN-latest",
         "changelog": "",
         "prerelease": false,
-        "tagged_at": "2026-06-29T06:10:29+00:00",
-        "filename": "GTNH-zh_CN-Translation-Daily-2026-06-29+369.zip",
-        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/460830428",
-        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/zh_CN-latest/GTNH-zh_CN-Translation-Daily-2026-06-29%2B369.zip",
+        "tagged_at": "2026-07-01T05:59:43+00:00",
+        "filename": "GTNH-zh_CN-Translation-Daily-2026-07-01+371.zip",
+        "download_url": "https://api.github.com/repos/GTNewHorizons/GTNH-Translations/releases/assets/462888955",
+        "browser_download_url": "https://github.com/GTNewHorizons/GTNH-Translations/releases/download/zh_CN-latest/GTNH-zh_CN-Translation-Daily-2026-07-01%2B371.zip",
         "extra_assets": []
       }
     ],
@@ -17443,7 +17443,7 @@
     },
     {
       "name": "Applied-Energistics-2-Unofficial",
-      "latest_version": "rv3-beta-994-GTNH",
+      "latest_version": "rv3-beta-995-GTNH",
       "private": false,
       "versions": [
         {
@@ -25974,6 +25974,16 @@
           "filename": "appliedenergistics2-rv3-beta-994-GTNH.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/Applied-Energistics-2-Unofficial/releases/assets/459485991",
           "browser_download_url": "https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/releases/download/rv3-beta-994-GTNH/appliedenergistics2-rv3-beta-994-GTNH.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "rv3-beta-995-GTNH",
+          "changelog": "## What's Changed\n* Improvement to hide button by @Eldrinn-Elantey in https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/pull/1408\n* feat(cellinventory): expose isDistribution by @hinyb in https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/pull/1407\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/compare/rv3-beta-994-GTNH...rv3-beta-995-GTNH\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-30T20:21:32+00:00",
+          "filename": "appliedenergistics2-rv3-beta-995-GTNH.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/Applied-Energistics-2-Unofficial/releases/assets/462491393",
+          "browser_download_url": "https://github.com/GTNewHorizons/Applied-Energistics-2-Unofficial/releases/download/rv3-beta-995-GTNH/appliedenergistics2-rv3-beta-995-GTNH.jar",
           "extra_assets": []
         }
       ],
@@ -44781,7 +44791,7 @@
     },
     {
       "name": "CropsNH",
-      "latest_version": "2.0.84",
+      "latest_version": "2.0.85",
       "private": false,
       "versions": [
         {
@@ -45632,6 +45642,16 @@
           "filename": "cropsnh-2.0.84.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/CropsNH/releases/assets/461805424",
           "browser_download_url": "https://github.com/GTNewHorizons/CropsNH/releases/download/2.0.84/cropsnh-2.0.84.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "2.0.85",
+          "changelog": "## What's Changed\n* Make bamboo hurt entities again. by @C0bra5 in https://github.com/GTNewHorizons/CropsNH/pull/183\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/CropsNH/compare/2.0.84...2.0.85\n",
+          "prerelease": false,
+          "tagged_at": "2026-07-01T07:19:21+00:00",
+          "filename": "cropsnh-2.0.85.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/CropsNH/releases/assets/462946039",
+          "browser_download_url": "https://github.com/GTNewHorizons/CropsNH/releases/download/2.0.85/cropsnh-2.0.85.jar",
           "extra_assets": []
         }
       ],
@@ -47554,7 +47574,7 @@
     },
     {
       "name": "DuraDisplay",
-      "latest_version": "1.4.3",
+      "latest_version": "1.4.4",
       "private": false,
       "versions": [
         {
@@ -47856,6 +47876,16 @@
           "filename": "duradisplay-1.4.3.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/DuraDisplay/releases/assets/459675243",
           "browser_download_url": "https://github.com/GTNewHorizons/DuraDisplay/releases/download/1.4.3/duradisplay-1.4.3.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "1.4.4",
+          "changelog": "## What's Changed\n* feat(config): parse enum values case-insensitively by @Caedis in https://github.com/GTNewHorizons/DuraDisplay/pull/28\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/DuraDisplay/compare/1.4.3...1.4.4\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-30T19:18:58+00:00",
+          "filename": "duradisplay-1.4.4.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/DuraDisplay/releases/assets/462447106",
+          "browser_download_url": "https://github.com/GTNewHorizons/DuraDisplay/releases/download/1.4.4/duradisplay-1.4.4.jar",
           "extra_assets": []
         }
       ],
@@ -62724,7 +62754,7 @@
     },
     {
       "name": "GT5-Unofficial",
-      "latest_version": "5.09.54.04",
+      "latest_version": "5.09.54.07",
       "private": false,
       "versions": [
         {
@@ -87766,6 +87796,36 @@
           "download_url": "https://api.github.com/repos/GTNewHorizons/GT5-Unofficial/releases/assets/461841502",
           "browser_download_url": "https://github.com/GTNewHorizons/GT5-Unofficial/releases/download/5.09.54.04/gregtech-5.09.54.04.jar",
           "extra_assets": []
+        },
+        {
+          "version_tag": "5.09.54.05",
+          "changelog": "## What's Changed\n* Remove me hatch special case in `drain` by @AnsonYeung in https://github.com/GTNewHorizons/GT5-Unofficial/pull/7274\n* Make the list of molds that the solidifier uses modifiable by @loenaaaa in https://github.com/GTNewHorizons/GT5-Unofficial/pull/7312\n* Ore variants by @boubou19 in https://github.com/GTNewHorizons/GT5-Unofficial/pull/7307\n* Clear ShutdownReason when enableWorking by @mllfjn in https://github.com/GTNewHorizons/GT5-Unofficial/pull/7255\n* Change Beam Crafter to fix power usage for 1 tick recipe by @AnsonYeung in https://github.com/GTNewHorizons/GT5-Unofficial/pull/7308\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/GT5-Unofficial/compare/5.09.54.04...5.09.54.05\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-30T20:10:17+00:00",
+          "filename": "gregtech-5.09.54.05.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/GT5-Unofficial/releases/assets/462483382",
+          "browser_download_url": "https://github.com/GTNewHorizons/GT5-Unofficial/releases/download/5.09.54.05/gregtech-5.09.54.05.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "5.09.54.06",
+          "changelog": "## What's Changed\n* Uptier BEC hatches to UIV by @Ruling-0 in https://github.com/GTNewHorizons/GT5-Unofficial/pull/7313\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/GT5-Unofficial/compare/5.09.54.05...5.09.54.06\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-30T20:13:55+00:00",
+          "filename": "gregtech-5.09.54.06.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/GT5-Unofficial/releases/assets/462485955",
+          "browser_download_url": "https://github.com/GTNewHorizons/GT5-Unofficial/releases/download/5.09.54.06/gregtech-5.09.54.06.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "5.09.54.07",
+          "changelog": "## What's Changed\n* Preserve maceration stack upgrade chip when converting by @koolkrafter5 in https://github.com/GTNewHorizons/GT5-Unofficial/pull/7287\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/GT5-Unofficial/compare/5.09.54.06...5.09.54.07\n",
+          "prerelease": false,
+          "tagged_at": "2026-07-01T05:56:47+00:00",
+          "filename": "gregtech-5.09.54.07.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/GT5-Unofficial/releases/assets/462887199",
+          "browser_download_url": "https://github.com/GTNewHorizons/GT5-Unofficial/releases/download/5.09.54.07/gregtech-5.09.54.07.jar",
+          "extra_assets": []
         }
       ],
       "license": "GNU Lesser General Public License v3.0",
@@ -90618,7 +90678,7 @@
     },
     {
       "name": "GTNHLib",
-      "latest_version": "0.11.20",
+      "latest_version": "0.11.21",
       "private": false,
       "versions": [
         {
@@ -93289,6 +93349,16 @@
           "filename": "gtnhlib-0.11.20.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/GTNHLib/releases/assets/459220829",
           "browser_download_url": "https://github.com/GTNewHorizons/GTNHLib/releases/download/0.11.20/gtnhlib-0.11.20.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "0.11.21",
+          "changelog": "## What's Changed\n* Add InventoryChangedEvent by @Caedis in https://github.com/GTNewHorizons/GTNHLib/pull/282\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/GTNHLib/compare/0.11.20...0.11.21\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-30T19:13:44+00:00",
+          "filename": "gtnhlib-0.11.21.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/GTNHLib/releases/assets/462443713",
+          "browser_download_url": "https://github.com/GTNewHorizons/GTNHLib/releases/download/0.11.21/gtnhlib-0.11.21.jar",
           "extra_assets": []
         }
       ],
@@ -106112,7 +106182,7 @@
     },
     {
       "name": "IFU",
-      "latest_version": "1.12.1",
+      "latest_version": "1.12.2",
       "private": false,
       "versions": [
         {
@@ -106355,6 +106425,16 @@
           "filename": "ifu-1.12.1.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/IFU/releases/assets/458802326",
           "browser_download_url": "https://github.com/GTNewHorizons/IFU/releases/download/1.12.1/ifu-1.12.1.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "1.12.2",
+          "changelog": "## What's Changed\n* Make ore vein discovery range configurable by @Algent in https://github.com/GTNewHorizons/IFU/pull/29\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/IFU/compare/1.12.1...1.12.2\n",
+          "prerelease": false,
+          "tagged_at": "2026-06-30T20:27:38+00:00",
+          "filename": "ifu-1.12.2.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/IFU/releases/assets/462495478",
+          "browser_download_url": "https://github.com/GTNewHorizons/IFU/releases/download/1.12.2/ifu-1.12.2.jar",
           "extra_assets": []
         }
       ],
@@ -107605,7 +107685,7 @@
     },
     {
       "name": "InventoryBogoSorter",
-      "latest_version": "1.3.34-GTNH",
+      "latest_version": "1.3.35-GTNH",
       "private": false,
       "versions": [
         {
@@ -108687,6 +108767,16 @@
           "filename": "bogosorter-1.3.34-GTNH.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/InventoryBogoSorter/releases/assets/457914869",
           "browser_download_url": "https://github.com/GTNewHorizons/InventoryBogoSorter/releases/download/1.3.34-GTNH/bogosorter-1.3.34-GTNH.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "1.3.35-GTNH",
+          "changelog": "## What's Changed\n* Reverts TC station crafting grid by @MassAnarchyy in https://github.com/GTNewHorizons/InventoryBogoSorter/pull/203\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/InventoryBogoSorter/compare/1.3.34-GTNH...1.3.35-GTNH\n",
+          "prerelease": false,
+          "tagged_at": "2026-07-01T05:55:42+00:00",
+          "filename": "bogosorter-1.3.35-GTNH.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/InventoryBogoSorter/releases/assets/462886508",
+          "browser_download_url": "https://github.com/GTNewHorizons/InventoryBogoSorter/releases/download/1.3.35-GTNH/bogosorter-1.3.35-GTNH.jar",
           "extra_assets": []
         }
       ],
@@ -127316,7 +127406,7 @@
     },
     {
       "name": "NewHorizonsCoreMod",
-      "latest_version": "2.9.0",
+      "latest_version": "2.9.1",
       "private": false,
       "versions": [
         {
@@ -138707,6 +138797,16 @@
           "filename": "GTNewHorizonsCoreMod-2.9.0.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/NewHorizonsCoreMod/releases/assets/460084030",
           "browser_download_url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/releases/download/2.9.0/GTNewHorizonsCoreMod-2.9.0.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "2.9.1",
+          "changelog": "## What's Changed\n* Fix Unstable Ingots not exploding on shift click craft by @FourIsTheNumber in https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/1838\n* Uptier BEC hatches to UIV and fix LoS Hatch Recipe by @Ruling-0 in https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/1840\n* Add missing ore variants to the space shuttle craft by @boubou19 in https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/1837\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/NewHorizonsCoreMod/compare/2.9.0...2.9.1\n",
+          "prerelease": false,
+          "tagged_at": "2026-07-01T05:54:15+00:00",
+          "filename": "GTNewHorizonsCoreMod-2.9.1.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/NewHorizonsCoreMod/releases/assets/462885399",
+          "browser_download_url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/releases/download/2.9.1/GTNewHorizonsCoreMod-2.9.1.jar",
           "extra_assets": []
         }
       ],
@@ -138716,7 +138816,7 @@
     },
     {
       "name": "NewHorizonsCoreMod",
-      "latest_version": "2.9.0",
+      "latest_version": "2.9.1",
       "private": false,
       "versions": [
         {
@@ -150107,6 +150207,16 @@
           "filename": "GTNewHorizonsCoreMod-2.9.0.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/NewHorizonsCoreMod/releases/assets/460084030",
           "browser_download_url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/releases/download/2.9.0/GTNewHorizonsCoreMod-2.9.0.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "2.9.1",
+          "changelog": "## What's Changed\n* Fix Unstable Ingots not exploding on shift click craft by @FourIsTheNumber in https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/1838\n* Uptier BEC hatches to UIV and fix LoS Hatch Recipe by @Ruling-0 in https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/1840\n* Add missing ore variants to the space shuttle craft by @boubou19 in https://github.com/GTNewHorizons/NewHorizonsCoreMod/pull/1837\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/NewHorizonsCoreMod/compare/2.9.0...2.9.1\n",
+          "prerelease": false,
+          "tagged_at": "2026-07-01T05:54:15+00:00",
+          "filename": "GTNewHorizonsCoreMod-2.9.1.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/NewHorizonsCoreMod/releases/assets/462885399",
+          "browser_download_url": "https://github.com/GTNewHorizons/NewHorizonsCoreMod/releases/download/2.9.1/GTNewHorizonsCoreMod-2.9.1.jar",
           "extra_assets": []
         }
       ],
@@ -157297,7 +157407,7 @@
     },
     {
       "name": "OpenComputers",
-      "latest_version": "1.12.47-GTNH",
+      "latest_version": "1.12.48-GTNH",
       "private": false,
       "versions": [
         {
@@ -158828,6 +158938,16 @@
           "filename": "OpenComputers-1.12.47-GTNH.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/OpenComputers/releases/assets/448852622",
           "browser_download_url": "https://github.com/GTNewHorizons/OpenComputers/releases/download/1.12.47-GTNH/OpenComputers-1.12.47-GTNH.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "1.12.48-GTNH",
+          "changelog": "## What's Changed\n* Stop boxing so much by @mitchej123 in https://github.com/GTNewHorizons/OpenComputers/pull/201\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/OpenComputers/compare/1.12.47-GTNH...1.12.48-GTNH\n",
+          "prerelease": false,
+          "tagged_at": "2026-07-01T02:01:46+00:00",
+          "filename": "OpenComputers-1.12.48-GTNH.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/OpenComputers/releases/assets/462729929",
+          "browser_download_url": "https://github.com/GTNewHorizons/OpenComputers/releases/download/1.12.48-GTNH/OpenComputers-1.12.48-GTNH.jar",
           "extra_assets": []
         }
       ],
@@ -192561,6 +192681,6 @@
   ],
   "latest_experimental": 136,
   "latest_successful_experimental": 136,
-  "latest_daily": 1107,
-  "latest_successful_daily": 1107
+  "latest_daily": 1111,
+  "latest_successful_daily": 1111
 }
