@@ -29,14 +29,14 @@ XVFB_LOG="$RUN_DIR/xvfb.log"
 CLIENT_LAUNCH_ENV="${CLIENT_LAUNCH_ENV:-$CLIENT_DIR/launch.env}"
 CLIENT_LAUNCH_ARGV="${CLIENT_LAUNCH_ARGV:-$CLIENT_DIR/launch.argv}"
 CLIENT_WINDOW_NAME="${CLIENT_WINDOW_NAME:-Minecraft}"
-CLIENT_RUN_TIMEOUT="${CLIENT_RUN_TIMEOUT:-480}"     # force the game closed if it runs longer than this (def 8 mins)
+CLIENT_RUN_TIMEOUT="${CLIENT_RUN_TIMEOUT:-660}"     # force the game closed if it runs longer than this (def 8 mins)
 CLIENT_GRACE_TIMEOUT="${CLIENT_GRACE_TIMEOUT:-10}"  # time allowed for save & exit after a nice close (def 10 secs)
 
 DISPLAY_NUM="${DISPLAY_NUM:-99}"
 RECORD_RESOLUTION="${RECORD_RESOLUTION:-854x480}"   # shared by Xvfb -screen and ffmpeg -video_size
 RECORD_DEPTH=24
 RECORD_FPS="${RECORD_FPS:-5}"
-RECORD_MAX_SECONDS="${RECORD_MAX_SECONDS:-590}"     # hard cap on recording length
+RECORD_MAX_SECONDS="${RECORD_MAX_SECONDS:-710}"     # hard cap on recording length
 RECORD_FONT="${RECORD_FONT:-/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf}"
 
 [ -f "$CLIENT_LAUNCH_ENV" ]  || { echo "launch env file missing: $CLIENT_LAUNCH_ENV"; exit 1; }
