@@ -47,6 +47,7 @@ start() {
   # Backgrounded and logged to a file so this CI step can finish while the JVM
   # keeps running into the next steps.
   bash "$SCRIPT_DIR/run_with_exit.sh" "$SERVER_EXIT_FLAG" java "${java_args[@]}" > "$SERVER_LOG" 2>&1 &
+  local wrapper_pid=$!
 
   tail -n +1 -F "$SERVER_LOG" 2>/dev/null &
   TAIL_PID=$!
@@ -62,6 +63,8 @@ start() {
         echo "server exited during settling (code $(cat "$SERVER_EXIT_FLAG"))"
         return 1
       fi
+
+      pgrep -P "$wrapper_pid" > "$RUN_DIR/server.pid"
 
       : > "$SERVER_READY_FLAG"
       return 0
