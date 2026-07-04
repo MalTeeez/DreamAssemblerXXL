@@ -401,6 +401,8 @@ jobs:
           name: server-join-capture
           path: |
             ${{ env.WORK_DIR }}/run/handshake.pcap
+            ${{ env.WORK_DIR }}/run/socket-timeline.log
+            ${{ env.WORK_DIR }}/run/process-timeline.log
           if-no-files-found: warn
           retention-days: 1
 

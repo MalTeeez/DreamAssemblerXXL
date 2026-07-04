@@ -101,6 +101,23 @@ run_client() {
   tail -n 0 -F "$SERVER_LOG" 2>/dev/null > >(sed -u 's/^/SERVER: /') &
   local server_tail_pid=$!
 
+  # socket-ownership timeline: answers "who owns 25565" for every second of the run
+  ( while true; do
+      echo "=== $(date -u +%T.%3N) ==="
+      sudo ss -tlnp 'sport = :25565'
+      sudo ss -tnp state established '( dport = :25565 or sport = :25565 )'
+      sleep 1
+    done ) >> "$RUN_DIR/socket-timeline.log" 2>&1 &
+  SSMOD_PID=$!
+
+  # process timeline: catches stale/duplicate JVMs and respawns
+  ( while true; do
+      echo "=== $(date -u +%T.%3N) ==="
+      ps -eo pid,ppid,etime,stat,args | grep -E 'java|25565' | grep -v grep
+      sleep 2
+    done ) >> "$RUN_DIR/process-timeline.log" 2>&1 &
+  PSMON_PID=$!
+
   sudo tcpdump -i lo -w "$RUN_DIR/handshake.pcap" 'tcp port 25565' &
   CAPTURE_PID=$!
 
