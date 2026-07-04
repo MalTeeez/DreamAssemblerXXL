@@ -108,7 +108,7 @@ jobs:
       - name: Install dependencies (for clientside)
         run: |
           sudo apt update
-          sudo apt install -y xvfb libgl1-mesa-dri xauth libegl1 libegl-mesa0 ffmpeg fonts-dejavu-core python3-xlib xdotool x11-xserver-utils scrot x11-utils
+          sudo apt install -y xvfb libgl1-mesa-dri xauth libegl1 libegl-mesa0 ffmpeg fonts-dejavu-core python3-xlib xdotool x11-xserver-utils scrot x11-utils tcpdump
 
       - name: Download build bundle
         uses: actions/download-artifact@v8
@@ -393,6 +393,16 @@ jobs:
             printf '%s\n' "$TABLE"
             printf '</details>\n'
           } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload pcap artifact
+        uses: actions/upload-artifact@v7
+        if: failure()
+        with:
+          name: server-join-capture
+          path: |
+            ${{ env.WORK_DIR }}/run/handshake.pcap
+          if-no-files-found: warn
+          retention-days: 1
 
       - name: Final important summary append
         shell: bash

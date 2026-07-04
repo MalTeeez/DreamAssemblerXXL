@@ -101,11 +101,15 @@ run_client() {
   tail -n 0 -F "$SERVER_LOG" 2>/dev/null > >(sed -u 's/^/SERVER: /') &
   local server_tail_pid=$!
 
+  tcpdump -i lo -w "$RUN_DIR/handshake.pcap" 'tcp port 25565' &
+  CAPTURE_PID=$!
+
   local rc=0
   bash "$SCRIPT_DIR/headless_client.sh" || rc=$?
 
   kill "$watcher_pid" "$watch_startup_pid" "$dual_pid" "$server_tail_pid" 2>/dev/null || true
   wait "$watcher_pid" "$watch_startup_pid" "$dual_pid" "$server_tail_pid" 2>/dev/null || true
+  kill "$CAPTURE_PID"
   return "$rc"
 }
 
