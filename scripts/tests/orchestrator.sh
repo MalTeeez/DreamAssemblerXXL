@@ -101,7 +101,7 @@ run_client() {
   tail -n 0 -F "$SERVER_LOG" 2>/dev/null > >(sed -u 's/^/SERVER: /') &
   local server_tail_pid=$!
 
-  tcpdump -i lo -w "$RUN_DIR/handshake.pcap" 'tcp port 25565' &
+  sudo tcpdump -i lo -w "$RUN_DIR/handshake.pcap" 'tcp port 25565' &
   CAPTURE_PID=$!
 
   local rc=0
