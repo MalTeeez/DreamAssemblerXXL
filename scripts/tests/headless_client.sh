@@ -196,10 +196,10 @@ done
 
 # 5. if still up, close nicely, then escalate
 if kill -0 -- "-$GAME_PGID" 2>/dev/null; then
-  echo "CLIENT THREADS:"
-  kill -3 -- "-$GAME_PGID"
-  echo "SERVER THREADS:"
-  kill -3 "$(cat "$RUN_DIR/server.pid")"
+  # echo "CLIENT THREADS:"
+  # kill -3 -- "-$GAME_PGID"
+  # echo "SERVER THREADS:"
+  # kill -3 "$(cat "$RUN_DIR/server.pid")"
   if close_window_nicely; then
     echo "asked window to close; waiting up to ${CLIENT_GRACE_TIMEOUT}s for save & exit"
   else
