@@ -247,10 +247,11 @@ Mod is client-side only.
 ## What's Changed:
 >* Rework Tooltip #24433 by @Elyspio in https://github.com/GTNewHorizons/CosmeticArmorReworked/pull/6 (1.0.6-GTNH)
 
-# Updated - CropsNH - 2.0.69 --> 2.0.90
-**Full Changelog**: https://github.com/GTNewHorizons/CropsNH/compare/2.0.69...2.0.90
+# Updated - CropsNH - 2.0.69 --> 2.0.91
+**Full Changelog**: https://github.com/GTNewHorizons/CropsNH/compare/2.0.69...2.0.91
 
 ## What's Changed:
+>* Add missing Postea transformer for GT5u chili pepper. by @C0bra5 in https://github.com/GTNewHorizons/CropsNH/pull/195 (2.0.91)
 >* Fix pool mutation nei overflow by @C0bra5 in https://github.com/GTNewHorizons/CropsNH/pull/193 (2.0.90)
 >* add apples to dark oak drop table by @C0bra5 in https://github.com/GTNewHorizons/CropsNH/pull/192 (2.0.89)
 >* Fix Crop Manager showing only an empty water tank in Waila by @Eldrinn-Elantey in https://github.com/GTNewHorizons/CropsNH/pull/191 (2.0.89)
@@ -708,10 +709,11 @@ Mod is client-side only.
 >* Falling obsidian no longer overwrites blocks on landing by @Eldrinn-Elantey in https://github.com/GTNewHorizons/Hardcore-Ender-Expansion/pull/41 (1.12.24-GTNH)
 >* Close GUI when the block is destroyed by @Kogepan229 in https://github.com/GTNewHorizons/Hardcore-Ender-Expansion/pull/40 (1.12.23-GTNH)
 
-# Updated - Hodgepodge - 2.7.160 --> 2.7.169
-**Full Changelog**: https://github.com/GTNewHorizons/Hodgepodge/compare/2.7.160...2.7.169
+# Updated - Hodgepodge - 2.7.160 --> 2.7.170
+**Full Changelog**: https://github.com/GTNewHorizons/Hodgepodge/compare/2.7.160...2.7.170
 
 ## What's Changed:
+>* Fix bug in fast block lookup by @SuperSoupr in https://github.com/GTNewHorizons/Hodgepodge/pull/941 (2.7.170)
 >* Disable fixBottomFaceUV by default by @koolkrafter5 in https://github.com/GTNewHorizons/Hodgepodge/pull/940 (2.7.169)
 >* Cross-hair rendering by @Ranzuu in https://github.com/GTNewHorizons/Hodgepodge/pull/939 (2.7.168)
 >* Prevent Wither Skeletons from trying to burn in sunlight by @Nikolay-Sitnikov in https://github.com/GTNewHorizons/Hodgepodge/pull/933 (2.7.167)

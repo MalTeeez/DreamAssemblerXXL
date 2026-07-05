@@ -44951,7 +44951,7 @@
     },
     {
       "name": "CropsNH",
-      "latest_version": "2.0.90",
+      "latest_version": "2.0.91",
       "private": false,
       "versions": [
         {
@@ -45862,6 +45862,16 @@
           "filename": "cropsnh-2.0.90.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/CropsNH/releases/assets/467103354",
           "browser_download_url": "https://github.com/GTNewHorizons/CropsNH/releases/download/2.0.90/cropsnh-2.0.90.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "2.0.91",
+          "changelog": "## What's Changed\n* Add missing Postea transformer for GT5u chili pepper. by @C0bra5 in https://github.com/GTNewHorizons/CropsNH/pull/195\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/CropsNH/compare/2.0.90...2.0.91\n",
+          "prerelease": false,
+          "tagged_at": "2026-07-05T14:54:57+00:00",
+          "filename": "cropsnh-2.0.91.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/CropsNH/releases/assets/467215544",
+          "browser_download_url": "https://github.com/GTNewHorizons/CropsNH/releases/download/2.0.91/cropsnh-2.0.91.jar",
           "extra_assets": []
         }
       ],
@@ -99662,7 +99672,7 @@
     },
     {
       "name": "Hodgepodge",
-      "latest_version": "2.7.169",
+      "latest_version": "2.7.170",
       "private": false,
       "versions": [
         {
@@ -105503,6 +105513,16 @@
           "filename": "hodgepodge-2.7.169.jar",
           "download_url": "https://api.github.com/repos/GTNewHorizons/Hodgepodge/releases/assets/467039002",
           "browser_download_url": "https://github.com/GTNewHorizons/Hodgepodge/releases/download/2.7.169/hodgepodge-2.7.169.jar",
+          "extra_assets": []
+        },
+        {
+          "version_tag": "2.7.170",
+          "changelog": "## What's Changed\n* Fix bug in fast block lookup by @SuperSoupr in https://github.com/GTNewHorizons/Hodgepodge/pull/941\n\n\n**Full Changelog**: https://github.com/GTNewHorizons/Hodgepodge/compare/2.7.169...2.7.170\n",
+          "prerelease": false,
+          "tagged_at": "2026-07-05T14:58:09+00:00",
+          "filename": "hodgepodge-2.7.170.jar",
+          "download_url": "https://api.github.com/repos/GTNewHorizons/Hodgepodge/releases/assets/467217419",
+          "browser_download_url": "https://github.com/GTNewHorizons/Hodgepodge/releases/download/2.7.170/hodgepodge-2.7.170.jar",
           "extra_assets": []
         }
       ],
@@ -193391,6 +193411,6 @@
   ],
   "latest_experimental": 136,
   "latest_successful_experimental": 136,
-  "latest_daily": 1142,
-  "latest_successful_daily": 1142
+  "latest_daily": 1143,
+  "latest_successful_daily": 1143
 }
