@@ -59,7 +59,7 @@ jobs:
             client-zip-variant: mmcprism-java17-25
             server-java-args: |
               -Xms1G -Xmx2G
-              -Dfml.readTimeout=5
+              -Dfml.readTimeout=45
               -Dhorizonqa.mode=ci -Dhorizonqa.autoRun=false -Dhorizonqa.world=normal -Dhorizonqa.gridOrigin=0,128,0
               -Dhorizonqa.reportDir=/tmp/daily-test/run
               @java9args.txt
@@ -76,7 +76,7 @@ jobs:
             server-java-args: |
               -Xms1G -Xmx2500m
               -XX:+UseStringDeduplication -XX:+UseCompressedOops -XX:+UseCodeCacheFlushing
-              -Dfml.readTimeout=5
+              -Dfml.readTimeout=45
               -Dhorizonqa.mode=ci -Dhorizonqa.autoRun=false -Dhorizonqa.world=normal -Dhorizonqa.gridOrigin=0,128,0
               -Dhorizonqa.reportDir=/tmp/daily-test/run
               -jar forge-1.7.10-10.13.4.1614-1.7.10-universal.jar
