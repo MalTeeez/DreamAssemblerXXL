@@ -158,8 +158,8 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          curl -sSL -o prism-bootstrap https://github.com/MalTeeez/prism-bootstrap/releases/download/1.0.2/prism-bootstrap-1.0.2-x86_64-unknown-linux-gnu
-          echo "c9701ac81478b808a9bd13a2290e12398cc139a0a40468081e8c4b00aabdc893  prism-bootstrap" | sha256sum -c -
+          curl -sSL -o prism-bootstrap https://github.com/MalTeeez/prism-bootstrap/releases/download/1.0.3/prism-bootstrap-1.0.3-x86_64-unknown-linux-gnu
+          echo "0240c93ec6e7b666b39bdf61032fa795223cdbe5b3c4349cd1fa76ca6346d144  prism-bootstrap" | sha256sum -c -
           chmod +x prism-bootstrap && mv prism-bootstrap /usr/local/bin/
 
       - name: Install client
